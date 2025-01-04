@@ -1,25 +1,63 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
-import {motion, useInView, useAnimation} from 'framer-motion';
+import { motion, useInView, useAnimation } from "framer-motion";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const Contact = () => {
-    useEffect(() => {
-        document.title="SabMedia | Contact";
-    },[]);
-    const {innerWidth: Width} = window;
-    const ref = useRef();
-    const isInView = useInView(ref)
-    const mainControlls = useAnimation(isInView);
-    
-    useEffect(()=> {
-        if(isInView) {
-            mainControlls.start("visible")
-        }
-    }, [isInView])
-    /* automatically scroll to the top of the page */
-    useEffect(() => {
-      window.scrollTo(0, 0);
-    }, []);
+  useEffect(() => {
+    document.title = "SabMedia | Contact";
+  }, []);
+  const { innerWidth: Width } = window;
+  const ref = useRef();
+  const isInView = useInView(ref);
+  const mainControlls = useAnimation(isInView);
+
+  useEffect(() => {
+    if (isInView) {
+      mainControlls.start("visible");
+    }
+  }, [isInView]);
+  /* automatically scroll to the top of the page */
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const formId = "a0392f81-43c1-4555-a543-989e0cb4772f"; // Replace with your Web3Forms ID
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        ...formData,
+        access_key: formId
+      })
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      toast.success("Message sent successfully!");
+      setFormData({ name: "", email: "", message: "" });
+    } else {
+      toast.error("Failed to send message. Please try again.");
+    }
+  };
   return (
     <>
       <Navbar />
@@ -28,15 +66,14 @@ const Contact = () => {
           <section class="relative z-10 bg-gradient-to-br from-blue-100  py-20  sm:px-20 sm:py-40 ">
             <div class="container mx-auto">
               <div class="-mx-4 flex flex-wrap lg:justify-between">
-                
-                <motion.div 
+                <motion.div
                   variants={{
-                                visible: { opacity: 1, y: 0 },
-                                hidden: { opacity: 0, y: -75 },
-                            }}
+                    visible: { opacity: 1, y: 0 },
+                    hidden: { opacity: 0, y: -75 }
+                  }}
                   initial="hidden"
                   animate="visible"
-                  transition={{ duration: 0.75, delay: 0.25 }}  
+                  transition={{ duration: 0.75, delay: 0.25 }}
                   class="w-full px-4 lg:w-1/2 xl:w-6/12"
                 >
                   <div class="mb-12 max-w-[570px] lg:mb-0 pl-4">
@@ -44,19 +81,23 @@ const Contact = () => {
                       GET IN TOUCH WITH US
                     </h2>
                     <p class="text-gray-500 mb-9 text-base leading-relaxed">
-                    Thank you for your interest in our digital agency. We're here to assist you with any inquiries or requests you may have.<br/>
-                    If you would like to get in touch with us, you can use the following contact details:
+                      Thank you for your interest in our digital agency. We're
+                      here to assist you with any inquiries or requests you may
+                      have.
+                      <br />
+                      If you would like to get in touch with us, you can use the
+                      following contact details:
                     </p>
-                    <motion.div 
-                        variants={{
-                                      visible: { opacity: 1, x: 0 },
-                                      hidden: { opacity: 0, x: -75 },
-                                  }}
-                        initial="hidden"
-                        animate="visible"
-                        transition={{ duration: 0.50, delay: 0.25 }}  
-                        class="mb-8 flex w-full max-w-[370px]"
-                    >      
+                    <motion.div
+                      variants={{
+                        visible: { opacity: 1, x: 0 },
+                        hidden: { opacity: 0, x: -75 }
+                      }}
+                      initial="hidden"
+                      animate="visible"
+                      transition={{ duration: 0.5, delay: 0.25 }}
+                      class="mb-8 flex w-full max-w-[370px]"
+                    >
                       <div class="bg-blue-400/20 text-blue-500 mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded  sm:h-[70px] sm:max-w-[70px]">
                         <svg
                           width="24"
@@ -75,17 +116,16 @@ const Contact = () => {
                           22 **** ***** ****** Safi, Morocco
                         </p>
                       </div>
-
                     </motion.div>
-                    <motion.div 
-                        variants={{
-                                      visible: { opacity: 1, x: 0 },
-                                      hidden: { opacity: 0, x: -75 },
-                                  }}
-                        initial="hidden"
-                        animate="visible"
-                        transition={{ duration: 0.50, delay: 0.50 }}  
-                        class="mb-8 flex w-full max-w-[370px]"
+                    <motion.div
+                      variants={{
+                        visible: { opacity: 1, x: 0 },
+                        hidden: { opacity: 0, x: -75 }
+                      }}
+                      initial="hidden"
+                      animate="visible"
+                      transition={{ duration: 0.5, delay: 0.5 }}
+                      class="mb-8 flex w-full max-w-[370px]"
                     >
                       <div class="bg-blue-400/20 text-blue-500 mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded  sm:h-[70px] sm:max-w-[70px]">
                         <svg
@@ -108,15 +148,15 @@ const Contact = () => {
                         </p>
                       </div>
                     </motion.div>
-                    <motion.div 
-                        variants={{
-                                      visible: { opacity: 1, x: 0 },
-                                      hidden: { opacity: 0, x: -75 },
-                                  }}
-                        initial="hidden"
-                        animate="visible"
-                        transition={{ duration: 0.50, delay: 0.75 }}  
-                        class="mb-8 flex w-full max-w-[370px]"
+                    <motion.div
+                      variants={{
+                        visible: { opacity: 1, x: 0 },
+                        hidden: { opacity: 0, x: -75 }
+                      }}
+                      initial="hidden"
+                      animate="visible"
+                      transition={{ duration: 0.5, delay: 0.75 }}
+                      class="mb-8 flex w-full max-w-[370px]"
                     >
                       <div class="bg-blue-400/20 text-blue-500 mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded  sm:h-[70px] sm:max-w-[70px]">
                         <svg
@@ -139,103 +179,83 @@ const Contact = () => {
                     </motion.div>
                   </div>
                 </motion.div>
-                
-                
-                <motion.div 
+
+                <motion.div
                   variants={{
-                                visible: { opacity: 1, y: 0 },
-                                hidden: { opacity: 0, y: 75 },
-                            }}
-                            initial="hidden"
-                            animate="visible"
-                            transition={{ duration: 0.75, delay: 0.25 }} 
-                            class="w-full px-4 lg:w-1/2 xl:w-5/12"
+                    visible: { opacity: 1, y: 0 },
+                    hidden: { opacity: 0, y: 75 }
+                  }}
+                  initial="hidden"
+                  animate="visible"
+                  transition={{ duration: 0.75, delay: 0.25 }}
+                  class="w-full px-4 lg:w-1/2 xl:w-5/12"
                 >
                   <div class="relative rounded-lg bg-white p-8 shadow-lg sm:p-12">
-                    <form>
-                      <motion.div 
-                        variants={{
-                                      visible: { opacity: 1, x: 0 },
-                                      hidden: { opacity: 0, x: 75 },
-                                  }}
-                        initial="hidden"
-                        animate="visible"
-                        transition={{ duration: 0.50, delay: 0.50 }}  
-                        class="mb-6"
-                      >
-                        <input
-                          type="text"
-                          placeholder="Your Name"
-                          class="text-body-color border-[f0f0f0] focus:border-blue-500 w-full rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
-                        />
-                      </motion.div>
-
-                      <motion.div 
-                        variants={{
-                                      visible: { opacity: 1, x: 0 },
-                                      hidden: { opacity: 0, x: 75 },
-                                  }}
-                        initial="hidden"
-                        animate="visible"
-                        transition={{ duration: 0.50, delay: 0.75 }}  
-                        class="mb-6"
-                      >
-                        <input
-                          type="email"
-                          placeholder="Your Email"
-                          class="text-body-color border-[f0f0f0] focus:border-blue-500 w-full rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
-                        />
-                      </motion.div>
-                      <motion.div 
-                        variants={{
-                                      visible: { opacity: 1, x: 0 },
-                                      hidden: { opacity: 0, x: 75 },
-                                  }}
-                        initial="hidden"
-                        animate="visible"
-                        transition={{ duration: 0.50, delay: 0.75 }}  
-                        class="mb-6"
-                      >
-                        <input
-                          type="text"
-                          placeholder="Your Phone"
-                          class="text-body-color border-[f0f0f0] focus:border-blue-500 w-full rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
-                        />
-                      </motion.div>
-                      <motion.div 
-                        variants={{
-                                      visible: { opacity: 1, x: 0 },
-                                      hidden: { opacity: 0, x: 75 },
-                                  }}
-                        initial="hidden"
-                        animate="visible"
-                        transition={{ duration: 0.50, delay: 1 }}  
-                        class="mb-6"
-                      >
-                        <textarea
-                          rows="6"
-                          placeholder="Your Message"
-                          class="text-body-color border-[f0f0f0] focus:border-blue-500 w-full resize-none rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
-                        ></textarea>
-                      </motion.div>
-                      <motion.div 
-                        variants={{
-                                      visible: { opacity: 1, x: 0 },
-                                      hidden: { opacity: 0, x: 75 },
-                                  }}
-                        initial="hidden"
-                        animate="visible"
-                        transition={{ duration: 0.50, delay: 1.25 }} 
-                      >
+                    <div className="max-w-md mx-auto p-4 bg-white shadow-lg rounded-md">
+                      <h2 className="text-2xl font-bold mb-4 text-gray-800">
+                        Contact Us
+                      </h2>
+                      <form onSubmit={handleSubmit} className="space-y-4">
+                        <div>
+                          <label
+                            htmlFor="name"
+                            className="block text-sm font-medium text-gray-700"
+                          >
+                            Name
+                          </label>
+                          <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            value={formData.name}
+                            onChange={handleChange}
+                            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                            required
+                          />
+                        </div>
+                        <div>
+                          <label
+                            htmlFor="email"
+                            className="block text-sm font-medium text-gray-700"
+                          >
+                            Email
+                          </label>
+                          <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                            required
+                          />
+                        </div>
+                        <div>
+                          <label
+                            htmlFor="message"
+                            className="block text-sm font-medium text-gray-700"
+                          >
+                            Message
+                          </label>
+                          <textarea
+                            id="message"
+                            name="message"
+                            rows="4"
+                            value={formData.message}
+                            onChange={handleChange}
+                            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                            required
+                          ></textarea>
+                        </div>
                         <button
                           type="submit"
-                          class="bg-blue-500 border-blue-500 w-full rounded border p-3 text-white transition hover:bg-opacity-90"
+                          className="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
                         >
-                          Send Message
+                          Send
                         </button>
-                      </motion.div>
-                    </form>
-
+                      </form>
+                      <ToastContainer position="bottom-right" />
+                    </div>
                   </div>
                 </motion.div>
               </div>
@@ -244,23 +264,24 @@ const Contact = () => {
         </div>
         <div className="w-[70%] h-[2px] bg-gradient-to-r from-blue-700 to-blue-400"></div>
         <div className="h-[42rem] sm:mt-20 mt-[20%]">
-          <motion.div 
-                        ref={ref}
-                        variants={{
-                                      visible: { opacity: 1, y: 0 },
-                                      hidden: { opacity: 0, y: 75 },
-                                  }}
-                        initial="hidden"
-                        animate={mainControlls}
-                        transition={{ duration: 0.50, delay: 0.50 }}  
-                       className="mx-auto mb-12 text-center lg:mb-20"
+          <motion.div
+            ref={ref}
+            variants={{
+              visible: { opacity: 1, y: 0 },
+              hidden: { opacity: 0, y: 75 }
+            }}
+            initial="hidden"
+            animate={mainControlls}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="mx-auto mb-12 text-center lg:mb-20"
           >
-              <h2 className="mb-4 text-3xl font-bold text-blue-500 sm:text-4xl md:text-[40px]">
-                Our Location
-              </h2>
-              <p className="text-lg text-gray-500">
-                  Visit us at our office! We'd love to meet you in person. Here's where you can find us:
-              </p>
+            <h2 className="mb-4 text-3xl font-bold text-blue-500 sm:text-4xl md:text-[40px]">
+              Our Location
+            </h2>
+            <p className="text-lg text-gray-500">
+              Visit us at our office! We'd love to meet you in person. Here's
+              where you can find us:
+            </p>
           </motion.div>
           <div className="flex justify-center mt-20" id="maps">
             <iframe
