@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 import Icon from "./images/favicon.png";
 import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 const Navbar = () => {
-    const [open, setOpen] = useState(false);
-    console.log(open);
+  const [open, setOpen] = useState(false);
+  console.log(open);
   return (
     <div className="font-poppins">
       <nav className="bg-white bg-opacity-60 backdrop-blur fixed px-2 p-1 sm:h-auto sm:w-full w-screen z-20 left-0 right-0 top-0 ">
@@ -16,8 +16,8 @@ const Navbar = () => {
               alt="icon"
               className="hidden sm:block sm:w-[35px] sm:-h-[35px] -mt-1"
             />
-            <span className="ml-2 mt-0 sm:mt-0 text-blue-500 font-semibold text-xl you">
-              SabMedia
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-red-500 text-2xl font-bold">
+              Apple Inc
             </span>
           </Link>
           <div className="flex">
@@ -38,7 +38,6 @@ const Navbar = () => {
                 <Link to="/contact">Contact</Link>
               </li>
             </ul>
-            
           </div>
           <div className="flex ">
             <button
@@ -83,7 +82,7 @@ const Navbar = () => {
         </div>
       </nav>
     </div>
-  )
-}
+  );
+};
 
 export default Navbar;
