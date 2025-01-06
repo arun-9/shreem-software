@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { MdVerified } from "react-icons/md";
 import { useAnimation, useInView, motion } from "framer-motion";
-import A from './images/A.png';
+import A from "./images/A.png";
 const Review = () => {
   const { innerWidth: Width } = window;
   const ref = useRef();
@@ -24,8 +24,8 @@ const Review = () => {
                     What our costumers have to say
                   </h2>
                   <p className="text-black">
-                    Here are some reviews of our costumers and their excperience
-                    with our services and that wee provide!
+                    Here are some reviews of our costumers and their excperience with our services
+                    and that wee provide!
                   </p>
                 </div>
                 <div className="p-6 xl:col-span-3">
@@ -33,16 +33,13 @@ const Review = () => {
                     <div className="grid content-center gap-4">
                       <div className="p-6 rounded shadow-md bg-white">
                         <p>
-                          I recently used the services of this agency, and I am
-                          thrilled with the results. The team went above and
-                          beyond to ensure that my needs were met. From the
-                          initial consultation to the final delivery, their
-                          professionalism and attention to detail were evident.
-                          They were prompt in responding to my queries and kept
-                          me informed throughout the process. The end product
-                          exceeded my expectations, and I highly recommend their
-                          services to anyone looking for top-notch quality and
-                          exceptional customer care.
+                          I recently used the services of this agency, and I am thrilled with the
+                          results. The team went above and beyond to ensure that my needs were met.
+                          From the initial consultation to the final delivery, their professionalism
+                          and attention to detail were evident. They were prompt in responding to my
+                          queries and kept me informed throughout the process. The end product
+                          exceeded my expectations, and I highly recommend their services to anyone
+                          looking for top-notch quality and exceptional customer care.
                         </p>
                         <div className="flex items-center mt-4 space-x-4">
                           <img
@@ -64,16 +61,13 @@ const Review = () => {
                       </div>
                       <div className="p-6 rounded shadow-md bg-white">
                         <p>
-                          I cannot say enough good things about this agency. The
-                          level of workmanship they displayed was truly
-                          impressive. They understood my vision perfectly and
-                          executed it flawlessly. Not only that, but their
-                          customer service was outstanding. They were patient,
-                          attentive, and always available to address any
-                          concerns I had. They delivered the project on time and
-                          within budget. I am extremely satisfied with their
-                          services and will definitely be using them again in
-                          the future.
+                          I cannot say enough good things about this agency. The level of
+                          workmanship they displayed was truly impressive. They understood my vision
+                          perfectly and executed it flawlessly. Not only that, but their customer
+                          service was outstanding. They were patient, attentive, and always
+                          available to address any concerns I had. They delivered the project on
+                          time and within budget. I am extremely satisfied with their services and
+                          will definitely be using them again in the future.
                         </p>
                         <div className="flex items-center mt-4 space-x-4">
                           <img
@@ -82,12 +76,8 @@ const Review = () => {
                             className="w-12 h-12 bg-center bg-cover rounded-full "
                           />
                           <div>
-                            <p className="text-md font-semibold">
-                              Sophia Davis
-                            </p>
-                            <p className="text-sm dark:text-gray-400">
-                              Microsoft
-                            </p>
+                            <p className="text-md font-semibold">Sophia Davis</p>
+                            <p className="text-sm dark:text-gray-400">Microsoft</p>
                           </div>
                           <div className="flex">
                             <MdVerified
@@ -101,17 +91,13 @@ const Review = () => {
                     <div className="grid content-center gap-4">
                       <div className="p-6 rounded shadow-md bg-white">
                         <p>
-                          I have had the pleasure of working with this agency,
-                          and I can confidently say that they are a reliable and
-                          trustworthy partner. From the moment I engaged their
-                          services, they demonstrated a high level of
-                          professionalism and expertise. They listened to my
-                          requirements attentively and provided valuable
-                          insights and suggestions. The team delivered
-                          exceptional results within the agreed-upon timeframe.
-                          Their commitment to client satisfaction is
-                          commendable, and I would not hesitate to recommend
-                          them to others.
+                          I have had the pleasure of working with this agency, and I can confidently
+                          say that they are a reliable and trustworthy partner. From the moment I
+                          engaged their services, they demonstrated a high level of professionalism
+                          and expertise. They listened to my requirements attentively and provided
+                          valuable insights and suggestions. The team delivered exceptional results
+                          within the agreed-upon timeframe. Their commitment to client satisfaction
+                          is commendable, and I would not hesitate to recommend them to others.
                         </p>
                         <div className="flex items-center mt-4 space-x-4">
                           <img
@@ -120,9 +106,7 @@ const Review = () => {
                             className="w-12 h-12 bg-center bg-cover rounded-full "
                           />
                           <div>
-                            <p className="text-md font-semibold">
-                              Ethan Williams
-                            </p>
+                            <p className="text-md font-semibold">Ethan Williams</p>
                             <p className="text-sm dark:text-gray-400">Dell</p>
                           </div>
                           <div className="flex">
@@ -135,16 +119,14 @@ const Review = () => {
                       </div>
                       <div className="p-6 rounded shadow-md bg-white">
                         <p>
-                          I recently engaged this agency for their services, and
-                          I am extremely pleased with the outcome. Their
-                          attention to detail is second to none. They
-                          meticulously handled every aspect of the project,
-                          ensuring that nothing was overlooked. The level of
-                          care and precision they put into their work is truly
-                          remarkable. The team was professional, responsive, and
-                          dedicated to delivering a top-notch experience. I am
-                          grateful for their expertise and would highly
-                          recommend their services to anyone seeking excellence.
+                          I recently engaged this agency for their services, and I am extremely
+                          pleased with the outcome. Their attention to detail is second to none.
+                          They meticulously handled every aspect of the project, ensuring that
+                          nothing was overlooked. The level of care and precision they put into
+                          their work is truly remarkable. The team was professional, responsive, and
+                          dedicated to delivering a top-notch experience. I am grateful for their
+                          expertise and would highly recommend their services to anyone seeking
+                          excellence.
                         </p>
                         <div className="flex items-center mt-4 space-x-4">
                           <img
@@ -153,9 +135,7 @@ const Review = () => {
                             className="w-12 h-12 bg-center bg-cover rounded-full dark:bg-gray-500"
                           />
                           <div>
-                            <p className="text-md font-semibold">
-                              Olivia Johnson
-                            </p>
+                            <p className="text-md font-semibold">Olivia Johnson</p>
                             <p className="text-sm dark:text-gray-400">Razer</p>
                           </div>
                           <div className="flex">
@@ -191,13 +171,12 @@ const Review = () => {
                     What our costumers have to say
                   </h2>
                   <p className="text-gray-500">
-                    Here are some reviews of our costumers and their excperience
-                    with our services and that wee provide!
+                    Here are some reviews of our costumers and their excperience with our services
+                    and that wee provide!
                   </p>
                 </motion.div>
                 <div className="p-6 xl:col-span-3">
                   <div className="grid gap-4 md:grid-cols-2">
-
                     <div className="grid content-center gap-4">
                       <motion.div
                         ref={ref}
@@ -211,16 +190,13 @@ const Review = () => {
                         className="p-6 rounded-lg shadow-lg bg-white mt-6"
                       >
                         <p>
-                          I recently used the services of this agency, and I am
-                          thrilled with the results. The team went above and
-                          beyond to ensure that my needs were met. From the
-                          initial consultation to the final delivery, their
-                          professionalism and attention to detail were evident.
-                          They were prompt in responding to my queries and kept
-                          me informed throughout the process. The end product
-                          exceeded my expectations, and I highly recommend their
-                          services to anyone looking for top-notch quality and
-                          exceptional customer care.
+                          I recently used the services of this agency, and I am thrilled with the
+                          results. The team went above and beyond to ensure that my needs were met.
+                          From the initial consultation to the final delivery, their professionalism
+                          and attention to detail were evident. They were prompt in responding to my
+                          queries and kept me informed throughout the process. The end product
+                          exceeded my expectations, and I highly recommend their services to anyone
+                          looking for top-notch quality and exceptional customer care.
                         </p>
                         <div className="flex justify-between items-center mt-4 space-x-4">
                           <div className="flex">
@@ -230,12 +206,8 @@ const Review = () => {
                               className="w-12 h-12 bg-center bg-cover rounded-full "
                             />
                             <div className="flex-col ml-4">
-                              <p className="text-lg font-semibold block">
-                                Sam Smith
-                              </p>
-                              <p className="text-sm text-gray-400 block">
-                                Asus
-                              </p>
+                              <p className="text-lg font-semibold block">Sam Smith</p>
+                              <p className="text-sm text-gray-400 block">Asus</p>
                             </div>
                           </div>
 
@@ -259,12 +231,10 @@ const Review = () => {
                         className="p-6 rounded-lg shadow-lg bg-white "
                       >
                         <p>
-                          I cannot say enough good things about this agency. The
-                          level of workmanship they displayed was truly
-                          impressive. They understood my vision perfectly and
-                          executed it flawlessly. Not only that, but their
-                          customer service was outstanding. They were patient,
-                          attentive.
+                          I cannot say enough good things about this agency. The level of
+                          workmanship they displayed was truly impressive. They understood my vision
+                          perfectly and executed it flawlessly. Not only that, but their customer
+                          service was outstanding. They were patient, attentive.
                         </p>
                         <div className="flex items-center justify-between mt-4 space-x-4">
                           <div className="flex">
@@ -274,12 +244,8 @@ const Review = () => {
                               className="w-12 h-12 bg-center bg-cover rounded-full "
                             />
                             <div className="flex-col sm:ml-2 ">
-                              <p className="text-lg font-semibold block">
-                                Benjamin Mitchell
-                              </p>
-                              <p className="text-sm text-gray-400 block">
-                                Razer
-                              </p>
+                              <p className="text-lg font-semibold block">Benjamin Mitchell</p>
+                              <p className="text-sm text-gray-400 block">Razer</p>
                             </div>
                           </div>
                           <div className="flex">
@@ -305,13 +271,11 @@ const Review = () => {
                         className="p-6 rounded-lg shadow-lg bg-white"
                       >
                         <p>
-                          I have had the pleasure of working with this agency,
-                          and I can confidently say that they are a reliable and
-                          trustworthy partner. From the moment I engaged their
-                          services, they demonstrated a high level of
-                          professionalism and expertise. They listened to my
-                          requirements attentively and provided valuable
-                          insights and suggestions. 
+                          I have had the pleasure of working with this agency, and I can confidently
+                          say that they are a reliable and trustworthy partner. From the moment I
+                          engaged their services, they demonstrated a high level of professionalism
+                          and expertise. They listened to my requirements attentively and provided
+                          valuable insights and suggestions.
                         </p>
                         <div className="flex justify-between items-center mt-2 space-x-4">
                           <div className="flex">
@@ -321,12 +285,8 @@ const Review = () => {
                               className="w-12 h-12 bg-center bg-cover rounded-full "
                             />
                             <div className="flex-col ml-4">
-                              <p className="text-lg font-semibold block">
-                                Olivia Johnson
-                              </p>
-                              <p className="text-sm text-gray-400 block">
-                                Microsoft
-                              </p>
+                              <p className="text-lg font-semibold block">Olivia Johnson</p>
+                              <p className="text-sm text-gray-400 block">Microsoft</p>
                             </div>
                           </div>
                           <div className="flex">
@@ -349,13 +309,11 @@ const Review = () => {
                         className="p-6 rounded-lg shadow-lg bg-white"
                       >
                         <p>
-                          I recently engaged this agency for their services, and
-                          I am extremely pleased with the outcome. Their
-                          attention to detail is second to none. They
-                          meticulously handled every aspect of the project,
-                          ensuring that nothing was overlooked. The level of
-                          care and precision they put into their work is truly
-                          remarkable. The team was professional, responsive, and
+                          I recently engaged this agency for their services, and I am extremely
+                          pleased with the outcome. Their attention to detail is second to none.
+                          They meticulously handled every aspect of the project, ensuring that
+                          nothing was overlooked. The level of care and precision they put into
+                          their work is truly remarkable. The team was professional, responsive, and
                           dedicated to delivering a top-notch experience.
                         </p>
                         <div className="flex justify-between items-center mt-4 space-x-4">
@@ -366,12 +324,8 @@ const Review = () => {
                               className="w-12 h-12 bg-center bg-cover rounded-full "
                             />
                             <div className="flex-col ml-4">
-                              <p className="text-lg font-semibold block">
-                                Sophia Davis
-                              </p>
-                              <p className="text-sm text-gray-400 block">
-                                Dell
-                              </p>
+                              <p className="text-lg font-semibold block">Sophia Davis</p>
+                              <p className="text-sm text-gray-400 block">Dell</p>
                             </div>
                           </div>
                           <div className="flex">

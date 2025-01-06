@@ -30,17 +30,11 @@ Visit `http://localhost:3000` to see your website.
 
 To deploy your website, build the project with `npm run build` and host the generated files on your preferred web hosting platform.
 
-
-
 ## About Me
 
-I'm a passionate web developer dedicated to crafting exceptional websites and web applications. If you're interested in my services, feel free to explore my portfolio to see some of my work and learn more about what I can offer.
----
+## I'm a passionate web developer dedicated to crafting exceptional websites and web applications. If you're interested in my services, feel free to explore my portfolio to see some of my work and learn more about what I can offer.
 
 For questions or inquiries, please contact me at [sabircode.me@gmail.com].
-
-
-
 
 ## Images
 
@@ -53,9 +47,3 @@ For questions or inquiries, please contact me at [sabircode.me@gmail.com].
 ![blogs](https://github.com/youssefsabir101/Company-website-ReactJS-TailwindCSS/assets/106603638/291817e5-1834-4edc-a811-b549790f7bc9)
 
 ![contact](https://github.com/youssefsabir101/Company-website-ReactJS-TailwindCSS/assets/106603638/a05468ae-27a6-4dbf-80f3-f08346670fa2)
-
-
-
-
-
-

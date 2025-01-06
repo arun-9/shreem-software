@@ -7,17 +7,13 @@ const Navbar = () => {
   console.log(open);
   return (
     <div className="font-poppins">
-      <nav className="bg-white bg-opacity-60 backdrop-blur fixed px-2 p-1 sm:h-auto sm:w-full w-screen z-20 left-0 right-0 top-0 ">
+      <nav className="bg-[#802BB1] bg-opacity-60 backdrop-blur fixed px-2 p-1 sm:h-auto sm:w-full w-screen z-20 left-0 right-0 top-0 ">
         {/* dektop nav */}
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto sm:px-4 pb-2 pt-2 text-black">
           <Link to="/" className="flex items-start">
-            <img
-              src={Icon}
-              alt="icon"
-              className="hidden sm:block sm:w-[35px] sm:-h-[35px] -mt-1"
-            />
+            <img src={Icon} alt="icon" className="hidden sm:block sm:w-[35px] sm:-h-[35px] -mt-1" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-red-500 text-2xl font-bold">
-              Apple Inc
+              ShreemTech
             </span>
           </Link>
           <div className="flex">

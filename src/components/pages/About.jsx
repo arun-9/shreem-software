@@ -35,7 +35,7 @@ const About = () => {
             <motion.div
               variants={{
                 visible: { opacity: 1, y: 0 },
-                hidden: { opacity: 0, y: 75 }
+                hidden: { opacity: 0, y: 75 },
               }}
               initial="hidden"
               animate="visible"
@@ -46,15 +46,15 @@ const About = () => {
                 Why Choose Us
               </h2>
               <p className="text-lg text-gray-500">
-                Find your Package that fits your needs, weather your a new
-                company or a Enterprise wee got you covered!
+                Find your Package that fits your needs, weather your a new company or a Enterprise
+                wee got you covered!
               </p>
             </motion.div>
             <div className="w-full px-4 lg:w-5/12 lg:pr-20 ">
               <motion.div
                 variants={{
                   visible: { opacity: 1, x: 0 },
-                  hidden: { opacity: 0, x: -120 }
+                  hidden: { opacity: 0, x: -120 },
                 }}
                 initial="hidden"
                 animate="visible"
@@ -76,31 +76,26 @@ const About = () => {
               <motion.div
                 variants={{
                   visible: { opacity: 1, x: 0 },
-                  hidden: { opacity: 0, x: 100 }
+                  hidden: { opacity: 0, x: 100 },
                 }}
                 initial="hidden"
                 animate="visible"
                 transition={{ duration: 0.75, delay: 0.25 }}
                 className="mt-0 lg:mt-0"
               >
-                <span className="block mb-2 text-xl font-semibold text-primary">
-                  About Us
-                </span>
+                <span className="block mb-2 text-xl font-semibold text-primary">About Us</span>
                 <div className="w-[10%] h-[3px] bg-gradient-to-r from-blue-700 to-blue-400"></div>
                 <h2 className="mb-8 text-3xl font-bold text-dark sm:text-4xl"></h2>
                 <p className="mb-8 text-base text-gray-500">
-                  "At SabMedia, we are passionate about crafting exceptional web
-                  solutions that drive digital success. With a team of dedicated
-                  experts, we bring together creativity, innovation, and
-                  technical expertise to create web experiences that leave a
-                  lasting impression. Our commitment to delivering cutting-edge
-                  websites, e-commerce platforms, and web applications is
-                  matched only by our dedication to our clients. We take pride
-                  in understanding your unique business objectives and
-                  translating them into captivating online experiences. Whether
-                  you're a startup looking to establish a web presence or an
-                  established enterprise seeking to expand, we're here to
-                  empower your digital journey. Join us, and let's transform
+                  "At SabMedia, we are passionate about crafting exceptional web solutions that
+                  drive digital success. With a team of dedicated experts, we bring together
+                  creativity, innovation, and technical expertise to create web experiences that
+                  leave a lasting impression. Our commitment to delivering cutting-edge websites,
+                  e-commerce platforms, and web applications is matched only by our dedication to
+                  our clients. We take pride in understanding your unique business objectives and
+                  translating them into captivating online experiences. Whether you're a startup
+                  looking to establish a web presence or an established enterprise seeking to
+                  expand, we're here to empower your digital journey. Join us, and let's transform
                   your web vision into reality."
                 </p>
                 <a
@@ -113,7 +108,7 @@ const About = () => {
               <motion.div
                 variants={{
                   visible: { opacity: 1, y: 0 },
-                  hidden: { opacity: 0, y: 75 }
+                  hidden: { opacity: 0, y: 75 },
                 }}
                 initial="hidden"
                 animate="visible"
@@ -147,7 +142,7 @@ const About = () => {
             ref={ref}
             variants={{
               visible: { opacity: 1, x: 0 },
-              hidden: { opacity: 0, x: 75 }
+              hidden: { opacity: 0, x: 75 },
             }}
             initial="hidden"
             animate={mainControlls}
@@ -158,8 +153,7 @@ const About = () => {
               Meet Our Team
             </h2>
             <p className="text-lg text-gray-500">
-              The skilled professionals driving innovation behind our digital
-              solutions.
+              The skilled professionals driving innovation behind our digital solutions.
             </p>
           </motion.div>
           <div className="flex flex-row flex-wrap-reverse justify-center mt-8">
@@ -167,7 +161,7 @@ const About = () => {
               ref={ref}
               variants={{
                 visible: { opacity: 1, y: 0 },
-                hidden: { opacity: 0, y: 75 }
+                hidden: { opacity: 0, y: 75 },
               }}
               initial="hidden"
               animate={mainControlls}
@@ -251,7 +245,7 @@ const About = () => {
               ref={ref}
               variants={{
                 visible: { opacity: 1, y: 0 },
-                hidden: { opacity: 0, y: 75 }
+                hidden: { opacity: 0, y: 75 },
               }}
               initial="hidden"
               animate={mainControlls}
@@ -335,7 +329,7 @@ const About = () => {
               ref={ref}
               variants={{
                 visible: { opacity: 1, y: 0 },
-                hidden: { opacity: 0, y: 75 }
+                hidden: { opacity: 0, y: 75 },
               }}
               initial="hidden"
               animate={mainControlls}

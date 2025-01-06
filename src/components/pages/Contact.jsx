@@ -26,7 +26,7 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    message: ""
+    message: "",
   });
 
   const handleChange = (e) => {
@@ -41,12 +41,12 @@ const Contact = () => {
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
         ...formData,
-        access_key: formId
-      })
+        access_key: formId,
+      }),
     });
 
     const result = await response.json();
@@ -69,7 +69,7 @@ const Contact = () => {
                 <motion.div
                   variants={{
                     visible: { opacity: 1, y: 0 },
-                    hidden: { opacity: 0, y: -75 }
+                    hidden: { opacity: 0, y: -75 },
                   }}
                   initial="hidden"
                   animate="visible"
@@ -81,17 +81,16 @@ const Contact = () => {
                       GET IN TOUCH WITH US
                     </h2>
                     <p class="text-gray-500 mb-9 text-base leading-relaxed">
-                      Thank you for your interest in our digital agency. We're
-                      here to assist you with any inquiries or requests you may
-                      have.
+                      Thank you for your interest in our digital agency. We're here to assist you
+                      with any inquiries or requests you may have.
                       <br />
-                      If you would like to get in touch with us, you can use the
-                      following contact details:
+                      If you would like to get in touch with us, you can use the following contact
+                      details:
                     </p>
                     <motion.div
                       variants={{
                         visible: { opacity: 1, x: 0 },
-                        hidden: { opacity: 0, x: -75 }
+                        hidden: { opacity: 0, x: -75 },
                       }}
                       initial="hidden"
                       animate="visible"
@@ -109,18 +108,14 @@ const Contact = () => {
                         </svg>
                       </div>
                       <div class="w-full">
-                        <h4 class="text-dark mb-1 text-xl font-bold">
-                          Our Location
-                        </h4>
-                        <p class="text-body-color text-base">
-                          22 **** ***** ****** Safi, Morocco
-                        </p>
+                        <h4 class="text-dark mb-1 text-xl font-bold">Our Location</h4>
+                        <p class="text-body-color text-base">22 **** ***** ****** Safi, Morocco</p>
                       </div>
                     </motion.div>
                     <motion.div
                       variants={{
                         visible: { opacity: 1, x: 0 },
-                        hidden: { opacity: 0, x: -75 }
+                        hidden: { opacity: 0, x: -75 },
                       }}
                       initial="hidden"
                       animate="visible"
@@ -140,18 +135,14 @@ const Contact = () => {
                         </svg>
                       </div>
                       <div class="w-full">
-                        <h4 class="text-dark mb-1 text-xl font-bold">
-                          Phone Number
-                        </h4>
-                        <p class="text-body-color text-base">
-                          (+212)8 12 34 56 78
-                        </p>
+                        <h4 class="text-dark mb-1 text-xl font-bold">Phone Number</h4>
+                        <p class="text-body-color text-base">(+212)8 12 34 56 78</p>
                       </div>
                     </motion.div>
                     <motion.div
                       variants={{
                         visible: { opacity: 1, x: 0 },
-                        hidden: { opacity: 0, x: -75 }
+                        hidden: { opacity: 0, x: -75 },
                       }}
                       initial="hidden"
                       animate="visible"
@@ -169,12 +160,8 @@ const Contact = () => {
                         </svg>
                       </div>
                       <div class="w-full">
-                        <h4 class="text-dark mb-1 text-xl font-bold">
-                          Email Address
-                        </h4>
-                        <p class="text-body-color text-base">
-                          sabircode@sabir.com
-                        </p>
+                        <h4 class="text-dark mb-1 text-xl font-bold">Email Address</h4>
+                        <p class="text-body-color text-base">sabircode@sabir.com</p>
                       </div>
                     </motion.div>
                   </div>
@@ -183,7 +170,7 @@ const Contact = () => {
                 <motion.div
                   variants={{
                     visible: { opacity: 1, y: 0 },
-                    hidden: { opacity: 0, y: 75 }
+                    hidden: { opacity: 0, y: 75 },
                   }}
                   initial="hidden"
                   animate="visible"
@@ -192,15 +179,10 @@ const Contact = () => {
                 >
                   <div class="relative rounded-lg bg-white p-8 shadow-lg sm:p-12">
                     <div className="max-w-md mx-auto p-4 bg-white shadow-lg rounded-md">
-                      <h2 className="text-2xl font-bold mb-4 text-gray-800">
-                        Contact Us
-                      </h2>
+                      <h2 className="text-2xl font-bold mb-4 text-gray-800">Contact Us</h2>
                       <form onSubmit={handleSubmit} className="space-y-4">
                         <div>
-                          <label
-                            htmlFor="name"
-                            className="block text-sm font-medium text-gray-700"
-                          >
+                          <label htmlFor="name" className="block text-sm font-medium text-gray-700">
                             Name
                           </label>
                           <input
@@ -268,7 +250,7 @@ const Contact = () => {
             ref={ref}
             variants={{
               visible: { opacity: 1, y: 0 },
-              hidden: { opacity: 0, y: 75 }
+              hidden: { opacity: 0, y: 75 },
             }}
             initial="hidden"
             animate={mainControlls}
@@ -279,8 +261,7 @@ const Contact = () => {
               Our Location
             </h2>
             <p className="text-lg text-gray-500">
-              Visit us at our office! We'd love to meet you in person. Here's
-              where you can find us:
+              Visit us at our office! We'd love to meet you in person. Here's where you can find us:
             </p>
           </motion.div>
           <div className="flex justify-center mt-20" id="maps">
