@@ -1,6 +1,7 @@
 # Portfolio
 
 Company portfolio built with React, Tailwind CSS designed to showcase your business, services, and portfolio.
+TODO: Update the readme file.
 
 [Scroll down to see the images](#images)
 
