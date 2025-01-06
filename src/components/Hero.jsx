@@ -16,7 +16,7 @@ function Hero() {
                 <motion.div
                   variants={{
                     visible: { opacity: 1, y: 0 },
-                    hidden: { opacity: 0, y: 75 }
+                    hidden: { opacity: 0, y: 75 },
                   }}
                   initial="hidden"
                   animate="visible"
@@ -29,28 +29,23 @@ function Hero() {
                   >
                     Welcome to <br />
                     <span className="sm:text-7xl text-6xl xl:my-40 ">
-                      <span className="text-blue-800  cursor-pointer my-40">
-                        Apple Inc
-                      </span>{" "}
-                      <br />
+                      <span className="text-blue-800  cursor-pointer my-40">Apple Inc</span> <br />
                     </span>
                     <span className="sm:text-7xl text-6xl">
                       Innovative Technology Solutions for the Modern World
                     </span>
                   </h1>
                   <p class="text-gray-500 text-sm my-8 max-w-[480px] sm:text-base">
-                    We provide cutting-edge hardware, powerful software, and
-                    seamless services to empower your digital journey. From
-                    sleek devices like iPads to the robust macOS operating
-                    system and intuitive platforms like the App Store, we
-                    deliver a complete ecosystem designed to enhance
-                    productivity, creativity, and connection!
+                    We provide cutting-edge hardware, powerful software, and seamless services to
+                    empower your digital journey. From sleek devices like iPads to the robust macOS
+                    operating system and intuitive platforms like the App Store, we deliver a
+                    complete ecosystem designed to enhance productivity, creativity, and connection!
                   </p>
                 </motion.div>
                 <motion.div
                   variants={{
                     visible: { opacity: 1, x: 0 },
-                    hidden: { opacity: 0, x: -75 }
+                    hidden: { opacity: 0, x: -75 },
                   }}
                   initial="hidden"
                   animate="visible"
@@ -81,7 +76,7 @@ function Hero() {
                 <motion.div
                   variants={{
                     visible: { opacity: 1 },
-                    hidden: { opacity: 0 }
+                    hidden: { opacity: 0 },
                   }}
                   initial="hidden"
                   animate="visible"
@@ -114,18 +109,14 @@ function Hero() {
                 <motion.div
                   variants={{
                     visible: { opacity: 1, x: 0, filter: "blur(0px)" },
-                    hidden: { opacity: 0, x: 75, filter: "blur(5px)" }
+                    hidden: { opacity: 0, x: 75, filter: "blur(5px)" },
                   }}
                   initial="hidden"
                   animate="visible"
                   transition={{ duration: 0.75, delay: 0.25 }}
                   class="relative z-10 inline-block pt-11 lg:pt-0 mt-6"
                 >
-                  <img
-                    src={heroImage}
-                    alt="hero"
-                    class="max-w-full lg:ml-auto rounded-l-[20%] "
-                  />
+                  <img src={heroImage} alt="hero" class="max-w-full lg:ml-auto rounded-l-[20%] " />
                 </motion.div>
               </div>
             </div>

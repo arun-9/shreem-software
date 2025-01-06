@@ -1,16 +1,16 @@
 import React, { useEffect, useRef } from "react";
-import {motion, useInView, useAnimation} from 'framer-motion';
+import { motion, useInView, useAnimation } from "framer-motion";
 const CallToAction = () => {
-    const {innerWidth: Width} = window;
-    const ref = useRef();
-    const isInView = useInView(ref)
-    const mainControlls = useAnimation(isInView);
-    
-    useEffect(()=> {
-        if(isInView) {
-            mainControlls.start("visible")
-        }
-    }, [isInView])
+  const { innerWidth: Width } = window;
+  const ref = useRef();
+  const isInView = useInView(ref);
+  const mainControlls = useAnimation(isInView);
+
+  useEffect(() => {
+    if (isInView) {
+      mainControlls.start("visible");
+    }
+  }, [isInView]);
   return (
     <div>
       <div className="w-[70%]  h-[2px] bg-gradient-to-r from-blue-200 to-blue-500"></div>
@@ -31,14 +31,13 @@ const CallToAction = () => {
                   class="w-full px-4 lg:w-1/2"
                 >
                   <span class="mb-2 text-base font-semibold text-white">
-                    Discover the ideal team to bring your digital dreams to life! 
+                    Discover the ideal team to bring your digital dreams to life!
                   </span>
                   <h2 class="mb-6 text-3xl font-bold leading-tight text-white sm:mb-8 sm:text-[38px] lg:mb-0">
-                    Begin your journey today, and leave the rest to us. <br class="xs:block hidden" />
-                    Your web development goals are {" "}
-                    <span className="text-5xl text-blue-500">
-                      our mission.
-                    </span>
+                    Begin your journey today, and leave the rest to us.{" "}
+                    <br class="xs:block hidden" />
+                    Your web development goals are{" "}
+                    <span className="text-5xl text-blue-500">our mission.</span>
                   </h2>
                 </motion.div>
                 <div class="w-full px-4 lg:w-1/2">
@@ -122,13 +121,7 @@ const CallToAction = () => {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <ellipse
-                      cx="173"
-                      cy="178.5"
-                      rx="173"
-                      ry="178.5"
-                      fill="url(#paint0_linear)"
-                    />
+                    <ellipse cx="173" cy="178.5" rx="173" ry="178.5" fill="url(#paint0_linear)" />
                     <defs>
                       <linearGradient
                         id="paint0_linear"
