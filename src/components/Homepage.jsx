@@ -6,6 +6,8 @@ import Prices from "./Prices";
 import CallToAction from "./CallToAction";
 import Review from "./Review";
 import Footer from "./Footer";
+import Testimonial22 from "./Testimonail";
+
 function Homepage() {
   useEffect(() => {
     document.title = "SabMedia | Home";
@@ -23,7 +25,8 @@ function Homepage() {
         <Features />
         <Prices />
         <CallToAction />
-        <Review />
+        <Testimonial22 /> {/* reference : https://easyfrontend.com/components/ui/testimonials */}
+        {/*<Review />*/}
         <Footer />
       </div>
     </>
