@@ -2,6 +2,7 @@
 
 Company portfolio built with React, Tailwind CSS designed to showcase your business, services, and portfolio.
 TODO: Update the readme file.
+2. Update footer section.
 
 [Scroll down to see the images](#images)
 
