@@ -1,95 +1,107 @@
-import React from "react";
-import Icon from "./images/favicon.png";
-import { Link } from "react-router-dom";
-import { ImLinkedin2, ImFacebook, ImTwitter } from "react-icons/im";
-import ScrollToTop from "react-scroll-up";
+import { FaFacebook, FaInstagram, FaLinkedin, FaLocationArrow, FaMobileAlt } from "react-icons/fa";
 const Footer = () => {
   return (
     <>
-      <div className="w-[70%]  h-[2px] bg-gradient-to-r from-blue-500 to-blue-200"></div>
-      <div className="overflow-x-hidden max-w-screen font-poppins">
-        <footer className="py-6 bg-gradient-to-br from-blue-100 ">
-          <div className="container px-6 mx-auto space-y-6 divide-y  md:space-y-12 divide-opacity-50">
-            <div className="grid grid-cols-12">
-              <div className="pb-6 col-span-full md:pb-0 md:col-span-6">
-                <Link to="/" className="flex justify-center space-x-3 md:justify-start">
-                  <div className="flex items-center justify-center w-12 h-12">
-                    <img src={Icon} alt="icon" className="" />
-                  </div>
-                  <span className="self-center text-2xl font-semibold text-blue-500">SabMedia</span>
-                </Link>
+      <div className="rounded-t-3xl bg-gradient-to-r from-violet-950 to-violet-900">
+        <section className="mx-auto max-w-[1200px] text-white">
+          <div className=" grid py-5 md:grid-cols-3">
+            <div className=" px-4 py-8 ">
+              <h1 className="mb-3 text-justify text-xl font-bold sm:text-left sm:text-3xl">
+                <a href="/#home" className="">
+                  COZ
+                  <span className="inline-block font-bold text-primary">WEB</span>
+                </a>
+              </h1>
+              <p className="">
+                Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Possimus, voluptate.{" "}
+              </p>
+              <br />
+              <div className="flex items-center gap-3">
+                <FaLocationArrow />
+                <p>Noida, Uttar Pradesh</p>
               </div>
-              <div className="col-span-6 text-center md:text-left md:col-span-3">
-                <p className="py-2 text-blue-800 font-bold">LINKS</p>
-                <ul>
-                  <li className=" mr-2 text-blue-500 hover:text-blue-800 font-semibold cursor-pointer">
-                    <Link to="/">Home</Link>
-                  </li>
-                  <li className=" mr-2 text-blue-500 hover:text-blue-800 font-semibold cursor-pointer">
-                    <Link to="/about">About</Link>
-                  </li>
-                  <li className=" mr-2 text-blue-500 hover:text-blue-800 font-semibold cursor-pointer">
-                    <Link to="/services">Services</Link>
-                  </li>
-                  <li className=" mr-2 text-blue-500 hover:text-blue-800 font-semibold cursor-pointer">
-                    <Link to="/blogs">Blogs</Link>
-                  </li>
-                  <li className=" text-blue-500 hover:text-blue-800 font-semibold cursor-pointer">
-                    <Link to="/contact">Contact</Link>
-                  </li>
-                </ul>
+              <div className="mt-3 flex items-center gap-3">
+                <FaMobileAlt />
+                <p>+91 123456789</p>
               </div>
-              <div className="col-span-6 text-center md:text-left md:col-span-3">
-                <p className="py-2 text-blue-800 font-bold">COMPANY</p>
-                <ul>
-                  <li className=" mr-2 text-blue-500 hover:text-blue-800 font-semibold cursor-pointer">
-                    <Link to="/">Privacy</Link>
-                  </li>
-                  <li className=" mr-2 text-blue-500 hover:text-blue-800 font-semibold cursor-pointer">
-                    <Link to="/">Terms of Service</Link>
-                  </li>
-                </ul>
-              </div>
+              {/* Social Handle */}
             </div>
-            <div className="grid justify-center pt-6 lg:justify-between">
-              <div className="flex flex-col self-center text-sm text-center md:block lg:col-start-1 md:space-x-6">
-                <span>
-                  ©2023 <span className="text-blue-500">Sabir Youssef</span>. All rights reserved.
-                </span>
+            <div className="col-span-2 grid grid-cols-2 sm:grid-cols-3 md:pl-10 ">
+              <div className="">
+                <div className="px-4 py-8 ">
+                  <h1 className="mb-3 text-justify text-xl font-bold sm:text-left sm:text-xl">
+                    Important Links
+                  </h1>
+                  <ul className={`flex flex-col gap-3`}>
+                    <li className="cursor-pointer transition-all duration-300 hover:translate-x-[2px]">
+                      Home
+                    </li>
+                    <li className="cursor-pointer transition-all duration-300 hover:translate-x-[2px]">
+                      About
+                    </li>
+                    <li className="cursor-pointer transition-all duration-300 hover:translate-x-[2px]">
+                      Services
+                    </li>
+                    <li className="cursor-pointer transition-all duration-300 hover:translate-x-[2px]">
+                      Login
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div className="flex justify-center pt-4 space-x-4 lg:pt-0 lg:col-end-13">
-                <Link
-                  to="/"
-                  title="Email"
-                  className="flex items-center justify-center  rounded-full"
-                >
-                  <ImLinkedin2 className="text-blue-500 w-7 h-7" />
-                </Link>
-                <Link
-                  to="/"
-                  title="Twitter"
-                  className="flex items-center justify-center  rounded-full"
-                >
-                  <ImFacebook className="text-blue-500 w-7 h-7" />
-                </Link>
-                <Link
-                  to="/"
-                  title="GitHub"
-                  className="flex items-center justify-center  rounded-full "
-                >
-                  <ImTwitter className="text-blue-500 w-7 h-7" />
-                </Link>
+              <div className="">
+                <div className="px-4 py-8 ">
+                  <h1 className="mb-3 text-justify text-xl font-bold sm:text-left sm:text-xl">
+                    Links
+                  </h1>
+                  <ul className="flex flex-col gap-3">
+                    <li className="cursor-pointer transition-all duration-300 hover:translate-x-[2px]">
+                      Privacy Policy
+                    </li>
+                    <li className="cursor-pointer transition-all duration-300 hover:translate-x-[2px]">
+                      Services
+                    </li>
+                    <li className="cursor-pointer transition-all duration-300 hover:translate-x-[2px]">
+                      About us
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="">
+                <div className="px-4 py-8 ">
+                  <h1 className="mb-3 text-justify text-xl font-bold sm:text-left sm:text-xl">
+                    Social Links
+                  </h1>
+                  <div className="flex flex-col gap-3">
+                    <h1>Subscribe to our newsletter</h1>
+                    <input
+                      className="rounded-full px-3 py-1 text-black focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500 "
+                      type="text"
+                      placeholder="Email"
+                    />
+                    <div className="mt-6 flex items-center gap-3">
+                      <a href="#" className="duration-200 hover:scale-105">
+                        <FaInstagram className="text-3xl" />
+                      </a>
+                      <a href="#" className="duration-200 hover:scale-105">
+                        <FaFacebook className="text-3xl" />
+                      </a>
+                      <a href="#" className="duration-200 hover:scale-105">
+                        <FaLinkedin className="text-3xl" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </footer>
+          <div>
+            <div className="border-t-2 border-gray-300/50 py-6 text-center">
+              @copyright 2024 Travery || Dilshad
+            </div>
+          </div>
+        </section>
       </div>
-      {/* scroll to top  */}
-      <ScrollToTop showUnder={160}>
-        <div className="bg-blue-500 w-10 h-10 text-white rounded-full flex items-center justify-center">
-          <span>Top</span>
-        </div>
-      </ScrollToTop>
     </>
   );
 };
