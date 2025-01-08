@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 import Banner from "../components/images/undraw_real_time_sync_re_nky7.svg";
 function Hero() {
   return (
