@@ -11,6 +11,7 @@ import mapbg from "../images/map-bg.png";
 import Features from "../Features";
 import Footer from "../Footer";
 import { useAnimation, useInView, motion } from "framer-motion";
+
 const Services = () => {
   useEffect(() => {
     document.title = "SabMedia | Services";
@@ -19,7 +20,6 @@ const Services = () => {
   const { innerWidth: width, innerHeight: height } = window;
   const ref = useRef(null);
   const isInView = useInView(ref);
-
   const mainControlls = useAnimation();
 
   useEffect(() => {
