@@ -4,6 +4,7 @@ import Footer from "../Footer";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
 const Contact = () => {
   useEffect(() => {
     document.title = "SabMedia | Contact";

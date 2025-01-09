@@ -9,6 +9,7 @@ import SabMedia from "../images/About/SabMedia.png";
 import profile1 from "../images/About/team/profile1.jpg";
 import profile2 from "../images/About/team/profile2.png";
 import profile3 from "../images/About/team/profile3.jpg";
+
 const About = () => {
   const { innerWidth: Width } = window;
   const ref = useRef();

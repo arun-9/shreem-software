@@ -5,6 +5,7 @@ import blog1 from "../images/blogs/image-01.jpg";
 import blog2 from "../images/blogs/image-02.jpg";
 import blog3 from "../images/blogs/image-03.jpg";
 import { motion } from "framer-motion";
+
 const Blogs = () => {
   useEffect(() => {
     document.title = "SabMedia | Blogs";

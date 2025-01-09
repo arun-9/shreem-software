@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 import Hero from "./Hero";
 import Features from "./Features";
 import Prices from "./Prices";
-import CallToAction from "./CallToAction";
+import CallToAction from "../components/CallToAction";
 import Review from "./Review";
 import Footer from "./Footer";
 import Testimonial22 from "./Testimonail";
