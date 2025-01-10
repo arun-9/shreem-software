@@ -20,11 +20,11 @@ function Hero() {
           >
             <h1 className="text-4xl"> Empowering Your Business with Innovative Solutions</h1>
             <p>
-              At ShreemTech, we provide cutting-edge software solutions to help your business grow
-              and thrive in a digital world. Whether it's custom development, cloud solutions, or
-              mobile apps, we are here to make it happen.
+              At Shree, we provide cutting-edge software solutions to help your business grow and
+              thrive in a digital world. Whether it's custom development, cloud solutions, or mobile
+              apps, we are here to make it happen.
             </p>
-            <div className="space-x-4">
+            {/*<div className="space-x-4">
               <a
                 href="/services"
                 className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-full font-semibold transition duration-300"
@@ -37,7 +37,7 @@ function Hero() {
               >
                 Get in Touch
               </a>
-            </div>
+            </div>*/}
           </div>
 
           <div

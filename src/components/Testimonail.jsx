@@ -4,19 +4,19 @@ import PropTypes from "prop-types";
 const testimonialData = [
   {
     img: "https://cdn.easyfrontend.com/pictures/testimonial/testimonial22_user1.png",
-    text: "Lorem ipsum dolor sit amet, consectetur elit. Nulla posuere ipsum molestie sem volutpat, non imperdiet leo porttitor.",
+    text: "Shreem Software transformed our business operations with their custom software solutions. Their team’s expertise and dedication ensured we had a seamless experience from start to finish. Highly recommend them!",
     user: "Mary Tyler",
     profession: "Traveller",
   },
   {
     img: "https://cdn.easyfrontend.com/pictures/testimonial/testimonial22_user2.png",
-    text: "Living creeping our waters evening firmament night. After without lights sixth moved together Also form.",
+    text: "The level of professionalism and innovation at Shreem Software is unmatched. Their enterprise software streamlined our processes and boosted our efficiency significantly. Truly a game-changer!",
     user: "Emily Berry",
     profession: "Traveller",
   },
   {
     img: "https://cdn.easyfrontend.com/pictures/testimonial/testimonial22_user3.png",
-    text: "Creepeth whales man green fruitful. Saw his appear great divide called tree all. Likeness make he land, appear sea for.",
+    text: "Working with Shreem Software was a pleasure. Their team not only understood our unique needs but also delivered a robust and scalable product ahead of schedule. Exceptional service!",
     user: "John Alex",
     profession: "Traveller",
   },
@@ -52,9 +52,10 @@ const Testimonial22 = () => {
             <h2 className="text-3xl md:text-[55px] font-bold mb-6">What People Says</h2>
             <div className="max-w-xl">
               <p className="text-lg leading-6 opacity-60">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla posuere ipsum
-                molestie sem volutpat, non imperdiet leo porttitor. Nullam tortor nibh, dictum vitae
-                porttitor eu, pharetra nec tellus.
+                At Shreem Software Pvt. Ltd., our clients consistently praise our commitment to
+                delivering innovative and tailored solutions. From seamless software integrations to
+                exceptional customer support, we are proud to empower businesses with cutting-edge
+                technology.
               </p>
             </div>
           </div>
