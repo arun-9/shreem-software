@@ -7,7 +7,7 @@ import CallToAction from "../components/CallToAction";
 //import Review from "./Review";
 import Footer from "./Footer";
 import Testimonial22 from "./Testimonail";
-import Home from "./home";
+
 //import Blogs from "./Blog/Blogs";
 
 function Homepage() {
