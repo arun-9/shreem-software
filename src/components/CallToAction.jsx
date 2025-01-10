@@ -14,12 +14,6 @@ const CallToAction = () => {
         </p>
         <div className="flex justify-center space-x-4">
           <Link
-            to="/services"
-            className="bg-blue-700 hover:bg-blue-800 dark:bg-gray-700 dark:hover:bg-gray-600 px-6 py-3 rounded-md text-lg font-semibold"
-          >
-            Explore Services
-          </Link>
-          <Link
             to="/contact"
             className="bg-transparent border-2 border-white hover:bg-white hover:text-blue-700 dark:border-gray-500 dark:hover:bg-gray-700 dark:hover:text-white px-6 py-3 rounded-md text-lg font-semibold"
           >

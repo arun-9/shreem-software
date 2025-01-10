@@ -65,7 +65,7 @@ const Contact = () => {
       <div className="bg-gradient-to-br from-blue-100">
         <div className="max-w-screen font-poppins overflow-hidden ">
           <section class="relative z-10 bg-gradient-to-br from-blue-100  py-20  sm:px-20 sm:py-40 ">
-            <div class="container mx-auto">
+            <div class=" container mx-auto">
               <div class="-mx-4 flex flex-wrap lg:justify-between">
                 <motion.div
                   variants={{
@@ -77,7 +77,7 @@ const Contact = () => {
                   transition={{ duration: 0.75, delay: 0.25 }}
                   class="w-full px-4 lg:w-1/2 xl:w-6/12"
                 >
-                  <div class="mb-12 max-w-[570px] lg:mb-0 pl-4">
+                  <div class=" mb-12 max-w-[570px] lg:mb-0 pl-4">
                     <h2 class="text-blue-500 mb-6 text-[32px] font-bold uppercase sm:text-[40px] lg:text-[36px] xl:text-[40px]">
                       GET IN TOUCH WITH US
                     </h2>
