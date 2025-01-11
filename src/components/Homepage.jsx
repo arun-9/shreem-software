@@ -1,14 +1,11 @@
 import { useEffect } from "react";
 import Navbar from "./Navbar";
-import Hero from "./Hero";
-//import Features from "./Features";
-//import Prices from "./Prices";
-import CallToAction from "../components/CallToAction";
-//import Review from "./Review";
 import Footer from "./Footer";
-import Testimonial22 from "./Testimonail";
-
-//import Blogs from "./Blog/Blogs";
+import Testimonial from "./Testimonail";
+import ContactUsBanner from "./ContactUsBanner/ContactUsBanner";
+import Service from "./ServiceCard/ServiceCard";
+import CarouselComponent from "./CarouselComponent/CarouselComponent";
+import ProcessSection from "./Process Component/ProcessSection";
 
 function Homepage() {
   useEffect(() => {
@@ -21,15 +18,13 @@ function Homepage() {
   return (
     <>
       <Navbar />
-      <Hero />
 
       <div className="bg-gradient-to-tr from-blue-100">
-        {/*<Features />
-        <Prices />
-        <Blogs />*/}
-        <CallToAction />
-        <Testimonial22 /> {/* reference : https://easyfrontend.com/components/ui/testimonials */}
-        {/*<Review />*/}
+        <CarouselComponent />
+        <Service />
+        <ProcessSection />
+        <ContactUsBanner />
+        <Testimonial /> {/* reference : https://easyfrontend.com/components/ui/testimonials */}
         <Footer />
       </div>
     </>
