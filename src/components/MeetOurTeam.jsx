@@ -1,4 +1,5 @@
 import { Slide, Fade } from "react-awesome-reveal";
+import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
 import profile1 from "../components/images/About/profile1.jpg";
 import profile2 from "../components/images/About/profile2.jpg";
 
@@ -10,6 +11,12 @@ const teamData = [
     role: "CEO & Founder",
     description:
       "A visionary leader with 10+ years in software development, committed to delivering impactful tech solutions.",
+    social: {
+      facebook: "#",
+      instagram: "#",
+      twitter: "#",
+      linkedin: "#",
+    },
   },
   {
     id: 2,
@@ -18,6 +25,12 @@ const teamData = [
     role: "Lead Software Engineer",
     description:
       "Expert in MERN stack, leading the charge on innovative tech development at Shreem Software.",
+    social: {
+      facebook: "#",
+      instagram: "#",
+      twitter: "#",
+      linkedin: "#",
+    },
   },
 ];
 
@@ -26,7 +39,7 @@ const MeetOurTeam = () => {
     <section className="container mx-auto py-10">
       <h2 className="text-3xl font-bold text-center mb-10">Meet Our Team</h2>
       <div className="flex flex-wrap justify-center gap-8">
-        {teamData.map(({ id, img, name, role, description }) => (
+        {teamData.map(({ id, img, name, role, description, social }) => (
           <div
             key={id}
             className="relative group bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden w-full sm:w-[48%] lg:w-[30%]"
@@ -41,6 +54,20 @@ const MeetOurTeam = () => {
                 <Fade cascade damping={0.05}>
                   <p className="mt-2">{description}</p>
                 </Fade>
+                <div className="flex mt-4 gap-4">
+                  <a href={social.facebook} target="_blank" rel="noopener noreferrer">
+                    <FaFacebook className="text-xl hover:text-blue-500 transition-colors duration-300" />
+                  </a>
+                  <a href={social.instagram} target="_blank" rel="noopener noreferrer">
+                    <FaInstagram className="text-xl hover:text-pink-500 transition-colors duration-300" />
+                  </a>
+                  <a href={social.twitter} target="_blank" rel="noopener noreferrer">
+                    <FaTwitter className="text-xl hover:text-blue-400 transition-colors duration-300" />
+                  </a>
+                  <a href={social.linkedin} target="_blank" rel="noopener noreferrer">
+                    <FaLinkedin className="text-xl hover:text-blue-700 transition-colors duration-300" />
+                  </a>
+                </div>
                 <button className="mt-4 border border-white px-4 py-2 rounded hover:bg-black/20 duration-300">
                   View Profile
                 </button>
