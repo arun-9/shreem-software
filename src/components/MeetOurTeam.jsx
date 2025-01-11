@@ -36,8 +36,11 @@ const teamData = [
 
 const MeetOurTeam = () => {
   return (
-    <section className="container mx-auto py-10">
-      <h2 className="text-3xl font-bold text-center mb-10">Meet Our Team</h2>
+    <section className=" bg-purple-600 container mx-auto  py-10 px-4">
+      <div>
+        <h2 className="text-3xl font-bold text-center mb-10">Meet Our Team</h2>
+      </div>
+
       <div className="flex flex-wrap justify-center gap-8">
         {teamData.map(({ id, img, name, role, description, social }) => (
           <div

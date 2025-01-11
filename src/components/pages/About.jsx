@@ -5,14 +5,14 @@ import MeetOurTeam from "../MeetOurTeam";
 const About = () => {
   return (
     <>
-      <div className="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 min-h-screen p-8">
-        <Navbar />
+      <Navbar />
+      <div className="bg-purple-400 px-4 py-8">
         {/* Company Vision & Mission */}
-        <section className="mb-16">
-          <h1 className="text-4xl font-bold text-center mb-6 pt-20">About Us</h1>
+        <section className="">
+          <h1 className="text-4xl font-bold text-center mb-6 pt-24">About Us</h1>
           <p className="text-lg text-center max-w-3xl mx-auto">
             At{" "}
-            <span className="font-bold text-purple-600 dark:text-purple-400">
+            <span className="font-bold text-black dark:text-purple-400">
               Shreem Software Pvt. Ltd.
             </span>
             , our mission is to empower businesses with innovative software solutions that drive
@@ -20,15 +20,15 @@ const About = () => {
             excellence, we aim to create software products that solve real-world challenges and
             deliver value to our clients.
           </p>
-          <p className="text-lg text-center max-w-3xl mx-auto mt-4">
+          <p className="text-lg text-center max-w-3xl mx-auto pb-4 mt-4">
             Guided by our core values of integrity, innovation, and collaboration, we strive to be a
             trusted partner for organizations looking to leverage technology for a brighter future.
           </p>
         </section>
-
-        {/* Team Introductions */}
-        <MeetOurTeam />
       </div>
+      {/* Team Introductions */}
+      <MeetOurTeam />
+
       <Footer />
     </>
   );
