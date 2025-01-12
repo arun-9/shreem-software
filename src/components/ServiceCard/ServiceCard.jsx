@@ -5,7 +5,9 @@ import { Container, Grid, Typography, Card, CardMedia, CardContent } from "@mui/
 const Service = () => {
   return (
     <div className="App">
-      <section style={{ padding: "1rem 0", backgroundColor: "#f7fafc" }}>
+      <section style={{ padding: "1rem 0", backgroundColor: "#F3E5F5" }}>
+        {" "}
+        {/* Light violet background */}
         <Container maxWidth="lg">
           <motion.div
             initial={{ opacity: 0 }}
@@ -13,7 +15,7 @@ const Service = () => {
             transition={{ duration: 1 }}
             style={{ textAlign: "center", marginBottom: "2rem" }}
           >
-            <Typography variant="h4" style={{ fontWeight: "bold", color: "#7c4dff" }}>
+            <Typography variant="h4" style={{ fontWeight: "bold", color: "#6A0DAD" }}>
               Our Services
             </Typography>
           </motion.div>
@@ -59,7 +61,7 @@ const ServiceCard = ({ title, description, imgUrl }) => {
           style={{ borderTopLeftRadius: "10px", borderTopRightRadius: "10px" }}
         />
         <CardContent>
-          <Typography variant="h6" style={{ fontWeight: "600", color: "#333" }}>
+          <Typography variant="h6" style={{ fontWeight: "600", color: "#6A0DAD" }}>
             {title}
           </Typography>
           <Typography variant="body2" color="textSecondary">
