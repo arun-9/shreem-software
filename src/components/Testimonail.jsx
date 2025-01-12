@@ -32,9 +32,11 @@ const TestimonialItem = ({ data }) => {
         </div>
       </div>
       <div className="p-6 pb-0 text-center">
-        <p className="text-[17px] leading-[1.7] opacity-60">{text}</p>
-        <h4 className="text-xl font-medium mt-12 mb-2">{user}</h4>
-        <h6 className="text-blue-600">{profession}</h6>
+        <p className="text-[17px] leading-[1.7] opacity-60 text-violet-600">{text}</p>{" "}
+        {/* Violet text for the testimonial */}
+        <h4 className="text-xl font-medium mt-12 mb-2 text-violet-700">{user}</h4>{" "}
+        {/* Violet text for the user's name */}
+        <h6 className="text-violet-500">{profession}</h6> {/* Violet text for profession */}
       </div>
     </div>
   );
@@ -49,9 +51,12 @@ const Testimonial22 = () => {
       <div className="container px-4 mx-auto">
         <div className="flex justify-center mb-6 md:mb-12">
           <div className="max-w-2xl text-center">
-            <h2 className="text-3xl md:text-[55px] font-bold mb-6">What People Says</h2>
+            <h2 className="text-3xl md:text-[55px] font-bold mb-6 text-violet-600">
+              What People Says
+            </h2>{" "}
+            {/* Violet header */}
             <div className="max-w-xl">
-              <p className="text-lg leading-6 opacity-60">
+              <p className="text-lg leading-6 opacity-60 text-violet-500">
                 At Shreem Software Pvt. Ltd., our clients consistently praise our commitment to
                 delivering innovative and tailored solutions. From seamless software integrations to
                 exceptional customer support, we are proud to empower businesses with cutting-edge
