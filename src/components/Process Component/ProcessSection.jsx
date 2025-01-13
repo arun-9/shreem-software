@@ -1,64 +1,165 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"; // For animation effects
 import img1 from "./img1.png";
 import img2 from "./img2.png";
 import img3 from "./img3.png";
+import img4 from "./img4.png";
+import img5 from "./img5.png";
+import img6 from "./img6.jpg";
 
 const ProcessSection = () => {
   return (
-    <section id="process-section" className="bg-violet-50 py-8 px-4">
-      {/* Content Container */}
-      <div className="max-w-7xl mx-auto px-4">
-        {/* Heading */}
-        <motion.div
-          className="text-center mb-12"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-        >
-          <h2 className="text-4xl font-bold text-violet-900">Efficient & Transparent Process</h2>
-          <p className="mt-4 text-lg text-violet-700">
-            Artificial Intelligence (AI) CRM solutions are transforming businesses to manage and
-            nurture customer relationships.
-          </p>
-        </motion.div>
+    <section className="work-process-wrapper py-12 bg-gray-100">
+      <div className="container mx-auto text-center">
+        <div className="section-title mb-8 animate__animated animate__fadeIn">
+          <h2 className="text-4xl font-bold text-purple-700">How We Work</h2>
+        </div>
 
-        {/* Step 1 */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Step 1 */}
+        {/* First Row */}
+        <div className="flex flex-wrap justify-center">
           <motion.div
-            className="flex flex-col items-center text-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            className="w-full sm:w-1/2 lg:w-1/3 p-4 animate__animated animate__fadeIn animate__delay-1s"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
           >
-            <img src={img1} alt="Process 1" className="w-24 h-24 mb-4" />
-            <h6 className="text-lg font-semibold text-violet-900">Free Consultation Session</h6>
-            <p className="text-violet-700">Analyse and gain insights into your Investments</p>
+            <div className="single-work-step flex flex-col items-center bg-white p-6 rounded-lg shadow-md glow-border">
+              <div
+                className="circle-img bg-cover w-24 h-24 flex items-center justify-center rounded-full mb-4"
+                style={{ backgroundImage: `url(${img1})` }}
+              >
+                <span className="text-white text-xl font-bold">01</span>
+              </div>
+              <div className="content text-center">
+                <h4 className="text-xl font-semibold text-purple-700">Book a call</h4>
+                <p className="text-gray-700">
+                  Booking a call with us can be done in just a minute. Our team is known for their
+                  friendliness and we strive to make every call useful and positive.
+                </p>
+              </div>
+            </div>
           </motion.div>
 
-          {/* Step 2 */}
+          {/* Second Column */}
           <motion.div
-            className="flex flex-col items-center text-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            className="w-full sm:w-1/2 lg:w-1/3 p-4 animate__animated animate__fadeIn animate__delay-2s"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
           >
-            <img src={img2} alt="Process 2" className="w-24 h-24 mb-4" />
-            <h6 className="text-lg font-semibold text-violet-900">Finalise the Requirements</h6>
-            <p className="text-violet-700">Analyse and gain insights into your Investments</p>
+            <div className="single-work-step flex flex-col items-center bg-white p-6 rounded-lg shadow-md glow-border">
+              <div
+                className="circle-img bg-cover w-24 h-24 flex items-center justify-center rounded-full mb-4"
+                style={{ backgroundImage: `url(${img2})` }}
+              >
+                <span className="text-white text-xl font-bold">02</span>
+              </div>
+              <div className="content text-center">
+                <h4 className="text-xl font-semibold text-purple-700">Design</h4>
+                <p className="text-gray-700">
+                  Our company uses an Agile approach to simplify development and help clients
+                  visualize the end product.
+                </p>
+              </div>
+            </div>
           </motion.div>
 
-          {/* Step 3 */}
+          {/* Third Column */}
           <motion.div
-            className="flex flex-col items-center text-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            className="w-full sm:w-1/2 lg:w-1/3 p-4 animate__animated animate__fadeIn animate__delay-3s"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
           >
-            <img src={img3} alt="Process 3" className="w-24 h-24 mb-4" />
-            <h6 className="text-lg font-semibold text-violet-900">Kick Start Work</h6>
-            <p className="text-violet-700">Analyse and gain insights into your Investments</p>
+            <div className="single-work-step flex flex-col items-center bg-white p-6 rounded-lg shadow-md glow-border">
+              <div
+                className="circle-img bg-cover w-24 h-24 flex items-center justify-center rounded-full mb-4"
+                style={{ backgroundImage: `url(${img3})` }}
+              >
+                <span className="text-white text-xl font-bold">03</span>
+              </div>
+              <div className="content text-center">
+                <h4 className="text-xl font-semibold text-purple-700">Plan</h4>
+                <p className="text-gray-700">
+                  At our company, we value a well-planned strategy. Once the designs are finalized
+                  and agreed upon, we create a timeline and budget plan.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Second Row */}
+        <div className="flex flex-wrap justify-center">
+          <motion.div
+            className="w-full sm:w-1/2 lg:w-1/3 p-4 animate__animated animate__fadeIn animate__delay-4s"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
+            <div className="single-work-step flex flex-col items-center bg-white p-6 rounded-lg shadow-md glow-border">
+              <div
+                className="circle-img bg-cover w-24 h-24 flex items-center justify-center rounded-full mb-4"
+                style={{ backgroundImage: `url(${img4})` }}
+              >
+                <span className="text-white text-xl font-bold">04</span>
+              </div>
+              <div className="content text-center">
+                <h4 className="text-xl font-semibold text-purple-700">Build</h4>
+                <p className="text-gray-700">
+                  Our team utilizes a variety of coding languages to ensure optimal results for your
+                  project. Choose us for excellent outcomes.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Fifth Column */}
+          <motion.div
+            className="w-full sm:w-1/2 lg:w-1/3 p-4 animate__animated animate__fadeIn animate__delay-5s"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
+            <div className="single-work-step flex flex-col items-center bg-white p-6 rounded-lg shadow-md glow-border">
+              <div
+                className="circle-img bg-cover w-24 h-24 flex items-center justify-center rounded-full mb-4"
+                style={{ backgroundImage: `url(${img5})` }}
+              >
+                <span className="text-white text-xl font-bold">05</span>
+              </div>
+              <div className="content text-center">
+                <h4 className="text-xl font-semibold text-purple-700">Test</h4>
+                <p className="text-gray-700">
+                  Our QA team stays up-to-date with the latest practices and technologies to ensure
+                  efficient performance. We conduct a combination of manual and automated testing.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Sixth Column */}
+          <motion.div
+            className="w-full sm:w-1/2 lg:w-1/3 p-4 animate__animated animate__fadeIn animate__delay-6s"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
+            <div className="single-work-step flex flex-col items-center bg-white p-6 rounded-lg shadow-md glow-border">
+              <div
+                className="circle-img bg-cover w-24 h-24 flex items-center justify-center rounded-full mb-4"
+                style={{ backgroundImage: `url(${img6})` }}
+              >
+                <span className="text-white text-xl font-bold">06</span>
+              </div>
+              <div className="content text-center">
+                <h4 className="text-xl font-semibold text-purple-700">Launch</h4>
+                <p className="text-gray-700">
+                  We're here for you from start to finish to ensure that your launch is stress-free
+                  and enjoyable, without any interruptions for snacks.
+                </p>
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>
