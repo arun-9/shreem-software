@@ -134,7 +134,7 @@ export default function ContactForm() {
           {errors.emailOrPhone && <p className="text-red-500 text-sm">{errors.emailOrPhone}</p>}
         </div>
 
-        {/* Service */}
+        {/* Service 
         <div className="mb-4">
           <label className="block text-violet-600 font-medium mb-2" htmlFor="service">
             Select Service
@@ -158,7 +158,7 @@ export default function ContactForm() {
             <option value="other">Other</option>
           </select>
           {errors.service && <p className="text-red-500 text-sm">{errors.service}</p>}
-        </div>
+        </div>*/}
 
         {/* Captcha */}
         <div className="mb-4">

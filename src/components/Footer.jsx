@@ -1,20 +1,22 @@
 import { FaFacebook, FaInstagram, FaLinkedin, FaLocationArrow, FaMobileAlt } from "react-icons/fa";
+
 const Footer = () => {
   return (
     <>
-      <div className=" bg-gradient-to-r from-violet-950 to-violet-900">
+      <div className="bg-gradient-to-r from-violet-950 to-violet-900">
         <section className="mx-auto max-w-[1200px] text-white">
-          <div className=" grid py-5 md:grid-cols-3">
-            <div className=" px-4 py-8 ">
+          <div className="grid py-5 md:grid-cols-3">
+            <div className="px-4 py-8">
               <h1 className="mb-3 text-justify text-xl font-bold sm:text-left sm:text-3xl">
-                <a href="/#home" className="">
-                  COZ
-                  <span className="inline-block font-bold text-primary">WEB</span>
+                <a href="/#home">
+                  Shreem
+                  <span className="inline-block font-bold text-primary"> Software Pvt. Ltd.</span>
                 </a>
               </h1>
-              <p className="">
-                Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Possimus, voluptate.{" "}
+              <p>
+                At Shreem Software Pvt. Ltd., we specialize in delivering cutting-edge software
+                solutions designed to drive innovation, streamline processes, and elevate your
+                business growth.
               </p>
               <br />
               <div className="flex items-center gap-3">
@@ -25,11 +27,10 @@ const Footer = () => {
                 <FaMobileAlt />
                 <p>+91 123456789</p>
               </div>
-              {/* Social Handle */}
             </div>
-            <div className="col-span-2 grid grid-cols-2 sm:grid-cols-3 md:pl-10 ">
-              <div className="">
-                <div className="px-4 py-8 ">
+            <div className="col-span-2 grid grid-cols-2 sm:grid-cols-3 md:pl-10">
+              <div>
+                <div className="px-4 py-8">
                   <h1 className="mb-3 text-justify text-xl font-bold sm:text-left sm:text-xl">
                     Important Links
                   </h1>
@@ -49,8 +50,8 @@ const Footer = () => {
                   </ul>
                 </div>
               </div>
-              <div className="">
-                <div className="px-4 py-8 ">
+              <div>
+                <div className="px-4 py-8">
                   <h1 className="mb-3 text-justify text-xl font-bold sm:text-left sm:text-xl">
                     Links
                   </h1>
@@ -67,15 +68,15 @@ const Footer = () => {
                   </ul>
                 </div>
               </div>
-              <div className="">
-                <div className="px-4 py-8 ">
+              <div>
+                <div className="px-4 py-8">
                   <h1 className="mb-3 text-justify text-xl font-bold sm:text-left sm:text-xl">
                     Social Links
                   </h1>
                   <div className="flex flex-col gap-3">
                     <h1>Subscribe to our newsletter</h1>
                     <input
-                      className="rounded-full px-3 py-1 text-black focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500 "
+                      className="rounded-full px-3 py-1 text-black focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500"
                       type="text"
                       placeholder="Email"
                     />
@@ -97,7 +98,7 @@ const Footer = () => {
           </div>
           <div>
             <div className="border-t-2 border-gray-300/50 py-6 text-center">
-              @copyright 2024 Travery || Dilshad
+              © 2024 Shreem Software Pvt. Ltd. | All Rights Reserved.
             </div>
           </div>
         </section>

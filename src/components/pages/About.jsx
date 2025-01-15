@@ -24,10 +24,10 @@ const About = () => {
             Guided by our core values of integrity, innovation, and collaboration, we strive to be a
             trusted partner for organizations looking to leverage technology for a brighter future.
           </p>
+          <MeetOurTeam />
         </section>
       </div>
       {/* Team Introductions */}
-      <MeetOurTeam />
 
       <Footer />
     </>

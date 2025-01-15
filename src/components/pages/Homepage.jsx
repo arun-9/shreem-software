@@ -11,6 +11,9 @@ import RecentClients from "../RecentClients/RecentClients";
 import IndustriesSection from "../IndustriesSection/IndustriesSection";
 import HeroVideo from "../HeroVideo/HeroVideo";
 import TabSection from "../TabSection/TabSection";
+
+import CallToAction from "../CTA/CallToAction";
+
 ///import EngageSteps from "./EngageSteps/EngageSteps";
 
 function Homepage() {
@@ -37,6 +40,7 @@ function Homepage() {
         <RecentClients />
         <TabSection />
         <IndustriesSection />
+        <CallToAction />
         {/*<ContactUsBanner />*/}
         <Testimonial /> {/* reference : https://easyfrontend.com/components/ui/testimonials */}
         <Footer />

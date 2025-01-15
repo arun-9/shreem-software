@@ -25,18 +25,16 @@ const testimonialData = [
 const TestimonialItem = ({ data }) => {
   const { img, text, user, profession } = data;
   return (
-    <div className="bg-white dark:bg-[#404156] shadow-xl rounded-b-xl h-full p-6 lg:p-12">
+    <div className="bg-white dark:bg-[#404156] shadow-xl border border-gray-300 dark:border-gray-600 rounded-b-xl h-full p-6 lg:p-12">
       <div className="w-full mx-auto flex justify-center">
         <div className="w-40 h-40 -mt-28 inline-flex justify-center items-center rounded-full border-4 border-white dark:border-[#404156] mx-auto">
           <img src={img} alt={user} className="rounded-full w-full" />
         </div>
       </div>
       <div className="p-6 pb-0 text-center">
-        <p className="text-[17px] leading-[1.7] opacity-60 text-violet-600">{text}</p>{" "}
-        {/* Violet text for the testimonial */}
-        <h4 className="text-xl font-medium mt-12 mb-2 text-violet-700">{user}</h4>{" "}
-        {/* Violet text for the user's name */}
-        <h6 className="text-violet-500">{profession}</h6> {/* Violet text for profession */}
+        <p className="text-[17px] leading-[1.7] opacity-60 text-black-600">{text}</p>
+        <h4 className="text-xl font-medium mt-12 mb-2 text-black-700">{user}</h4>
+        <h6 className="text-violet-500">{profession}</h6>
       </div>
     </div>
   );
@@ -47,16 +45,15 @@ TestimonialItem.propTypes = {
 
 const Testimonial22 = () => {
   return (
-    <section className="ezy__testimonial22 dark py-14 md:py-24 bg-white dark:bg-[#2E2F41] text-zinc-900 dark:text-white">
+    <section className="ezy__testimonial22 dark py-14 md:py-24 bg-violet-100 dark:bg-[#2E2F41] text-zinc-900 dark:text-white border border-gray-300 dark:border-gray-600">
       <div className="container px-4 mx-auto">
         <div className="flex justify-center mb-6 md:mb-12">
           <div className="max-w-2xl text-center">
             <h2 className="text-3xl md:text-[55px] font-bold mb-6 text-violet-600">
               What People Says
-            </h2>{" "}
-            {/* Violet header */}
+            </h2>
             <div className="max-w-xl">
-              <p className="text-lg leading-6 opacity-60 text-violet-500">
+              <p className="text-lg leading-6 opacity-60 text-black">
                 At Shreem Software Pvt. Ltd., our clients consistently praise our commitment to
                 delivering innovative and tailored solutions. From seamless software integrations to
                 exceptional customer support, we are proud to empower businesses with cutting-edge

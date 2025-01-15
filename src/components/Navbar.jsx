@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { HiMenuAlt3, HiMenuAlt1 } from "react-icons/hi";
 import { BiPhoneCall } from "react-icons/bi";
+import Service from "./ServiceCard/ServiceCard";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -41,16 +42,12 @@ const Navbar = () => {
                 About
               </Link>
             </li>
-            <li className="cursor-pointer">
-              <Link to="/services" className="pb-2">
-                Services
-              </Link>
-            </li>
-            <li className="cursor-pointer">
+
+            {/*<li className="cursor-pointer">
               <Link to="/contact" className="pb-2">
                 Contact
               </Link>
-            </li>
+            </li>*/}
             {/* Phone number section */}
             <div className="flex items-center gap-4">
               <li>
@@ -83,16 +80,12 @@ const Navbar = () => {
                 About
               </Link>
             </li>
-            <li>
-              <Link to="/services" className="block hover:text-gray-200" onClick={toggleMobileMenu}>
-                Services
-              </Link>
-            </li>
-            <li>
+
+            {/*<li>
               <Link to="/contact" className="block hover:text-gray-200" onClick={toggleMobileMenu}>
                 Contact
               </Link>
-            </li>
+            </li>*/}
           </ul>
         </div>
       )}
