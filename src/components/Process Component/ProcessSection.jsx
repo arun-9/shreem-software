@@ -24,11 +24,8 @@ const ProcessSection = () => {
             transition={{ duration: 1 }}
           >
             <div className="single-work-step flex flex-col items-center bg-white p-6 rounded-lg shadow-md glow-border">
-              <div
-                className="circle-img bg-cover w-24 h-24 flex items-center justify-center rounded-full mb-4"
-                style={{ backgroundImage: `url(${img1})` }}
-              >
-                <span className="text-white text-xl font-bold">01</span>
+              <div className="circle-img w-24 h-24 flex items-center justify-center rounded-full mb-4">
+                <img src={img1} alt="Step 1" className="w-full h-full object-cover rounded-full" />
               </div>
               <div className="content text-center">
                 <h4 className="text-xl font-semibold text-purple-700">Book a call</h4>
@@ -48,11 +45,8 @@ const ProcessSection = () => {
             transition={{ duration: 1 }}
           >
             <div className="single-work-step flex flex-col items-center bg-white p-6 rounded-lg shadow-md glow-border">
-              <div
-                className="circle-img bg-cover w-24 h-24 flex items-center justify-center rounded-full mb-4"
-                style={{ backgroundImage: `url(${img2})` }}
-              >
-                <span className="text-white text-xl font-bold">02</span>
+              <div className="circle-img w-24 h-24 flex items-center justify-center rounded-full mb-4">
+                <img src={img2} alt="Step 2" className="w-full h-full object-cover rounded-full" />
               </div>
               <div className="content text-center">
                 <h4 className="text-xl font-semibold text-purple-700">Design</h4>
@@ -72,11 +66,8 @@ const ProcessSection = () => {
             transition={{ duration: 1 }}
           >
             <div className="single-work-step flex flex-col items-center bg-white p-6 rounded-lg shadow-md glow-border">
-              <div
-                className="circle-img bg-cover w-24 h-24 flex items-center justify-center rounded-full mb-4"
-                style={{ backgroundImage: `url(${img3})` }}
-              >
-                <span className="text-white text-xl font-bold">03</span>
+              <div className="circle-img w-24 h-24 flex items-center justify-center rounded-full mb-4">
+                <img src={img3} alt="Step 3" className="w-full h-full object-cover rounded-full" />
               </div>
               <div className="content text-center">
                 <h4 className="text-xl font-semibold text-purple-700">Plan</h4>
@@ -98,11 +89,8 @@ const ProcessSection = () => {
             transition={{ duration: 1 }}
           >
             <div className="single-work-step flex flex-col items-center bg-white p-6 rounded-lg shadow-md glow-border">
-              <div
-                className="circle-img bg-cover w-24 h-24 flex items-center justify-center rounded-full mb-4"
-                style={{ backgroundImage: `url(${img4})` }}
-              >
-                <span className="text-white text-xl font-bold">04</span>
+              <div className="circle-img w-24 h-24 flex items-center justify-center rounded-full mb-4">
+                <img src={img4} alt="Step 4" className="w-full h-full object-cover rounded-full" />
               </div>
               <div className="content text-center">
                 <h4 className="text-xl font-semibold text-purple-700">Build</h4>
@@ -122,11 +110,8 @@ const ProcessSection = () => {
             transition={{ duration: 1 }}
           >
             <div className="single-work-step flex flex-col items-center bg-white p-6 rounded-lg shadow-md glow-border">
-              <div
-                className="circle-img bg-cover w-24 h-24 flex items-center justify-center rounded-full mb-4"
-                style={{ backgroundImage: `url(${img5})` }}
-              >
-                <span className="text-white text-xl font-bold">05</span>
+              <div className="circle-img w-24 h-24 flex items-center justify-center rounded-full mb-4">
+                <img src={img5} alt="Step 5" className="w-full h-full object-cover rounded-full" />
               </div>
               <div className="content text-center">
                 <h4 className="text-xl font-semibold text-purple-700">Test</h4>
@@ -146,11 +131,8 @@ const ProcessSection = () => {
             transition={{ duration: 1 }}
           >
             <div className="single-work-step flex flex-col items-center bg-white p-6 rounded-lg shadow-md glow-border">
-              <div
-                className="circle-img bg-cover w-24 h-24 flex items-center justify-center rounded-full mb-4"
-                style={{ backgroundImage: `url(${img6})` }}
-              >
-                <span className="text-white text-xl font-bold">06</span>
+              <div className="circle-img w-24 h-24 flex items-center justify-center rounded-full mb-4">
+                <img src={img6} alt="Step 6" className="w-full h-full object-cover rounded-full" />
               </div>
               <div className="content text-center">
                 <h4 className="text-xl font-semibold text-purple-700">Launch</h4>

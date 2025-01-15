@@ -2,7 +2,7 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaLocationArrow, FaMobileAlt } fro
 const Footer = () => {
   return (
     <>
-      <div className="rounded-t-3xl bg-gradient-to-r from-violet-950 to-violet-900">
+      <div className=" bg-gradient-to-r from-violet-950 to-violet-900">
         <section className="mx-auto max-w-[1200px] text-white">
           <div className=" grid py-5 md:grid-cols-3">
             <div className=" px-4 py-8 ">
