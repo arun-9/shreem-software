@@ -1,5 +1,5 @@
 import Navbar from "../Navbar";
-import Footer from "../Footer";
+import Footer from "../Unused Components/Footer";
 import MeetOurTeam from "../MeetOurTeam";
 
 const About = () => {

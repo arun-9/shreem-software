@@ -36,7 +36,7 @@ const teamData = [
 
 const MeetOurTeam = () => {
   return (
-    <section className=" bg-purple-600 container mx-auto  py-10 px-4">
+    <section section id="team" className="py-12 bg-violet-100">
       <div>
         <h2 className="text-3xl font-bold text-center mb-10">Meet Our Team</h2>
       </div>
