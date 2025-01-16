@@ -1,7 +1,7 @@
 import Navbar from "../Navbar";
 import Footer from "../Footer";
-import ContactForm from "../ContactForm/ContactForm";
-import ContactUsWithCaptcha from "../ContactForm/ContactUs";
+import ContactForm from "../Unused Components/ContactForm/ContactForm";
+import ContactUsWithCaptcha from "../Unused Components/ContactForm/ContactUs";
 
 const Contact = () => {
   return (

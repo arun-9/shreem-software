@@ -1,9 +1,15 @@
 import { useEffect } from "react";
-import Navbar from "../Navbar";
-import Footer from "../Footer";
-import Testimonial from "../Testimonail";
+//import Navbar from "../Navbar";
+import Header from "../Header Nav Component/Header";
+import MenuSection from "../menuItems/menuItems";
+import MeetOurTeam from "../../components/MeetOurTeam";
+import Testimonials from "../Testimonials/Testimonials";
+import Contact from "../ContactSection/ContactSection";
+import Footer from "../Footer/Footer";
+//import Footer from "../Footer";
+//import Testimonial from "../Testimonail";
 //import ContactUsBanner from "../ContactUsBanner/ContactUsBanner";
-import Service from "../ServiceCard/ServiceCard";
+//import Service from "../ServiceCard/ServiceCard";
 //import CarouselComponent from "./CarouselComponent/CarouselComponent";
 import ProcessSection from "../Process Component/ProcessSection";
 import RecentClients from "../RecentClients/RecentClients";
@@ -11,7 +17,7 @@ import RecentClients from "../RecentClients/RecentClients";
 import IndustriesSection from "../IndustriesSection/IndustriesSection";
 import HeroVideo from "../HeroVideo/HeroVideo";
 import TabSection from "../TabSection/TabSection";
-
+import AboutSection from "../AboutSection/AboutSection";
 import CallToAction from "../CTA/CallToAction";
 
 ///import EngageSteps from "./EngageSteps/EngageSteps";
@@ -26,23 +32,30 @@ function Homepage() {
   }, []);
   return (
     <>
-      <Navbar />
+      {/*<Navbar />*/}
+      <Header />
 
       <div className="bg-gradient-to-tr from-violet-100 to-violet-300">
         {" "}
         {/* Violet gradient background */}
         {/*<CarouselComponent />*/}
         <HeroVideo />
+        <AboutSection />
+        <MenuSection />
+        <MeetOurTeam />
+        <Testimonials />
         {/* reference : https://tailwindflex.com/@samuel33/hero-with-video-background */}
-        <Service />
+        {/*<Service />*/}
         {/*<ServicesSection />*/}
         <ProcessSection />
         <RecentClients />
         <TabSection />
         <IndustriesSection />
-        <CallToAction />
+        {/*<CallToAction />*/}
         {/*<ContactUsBanner />*/}
-        <Testimonial /> {/* reference : https://easyfrontend.com/components/ui/testimonials */}
+        {/*<Testimonial />*/}{" "}
+        {/* reference : https://easyfrontend.com/components/ui/testimonials */}
+        <Contact />
         <Footer />
       </div>
     </>

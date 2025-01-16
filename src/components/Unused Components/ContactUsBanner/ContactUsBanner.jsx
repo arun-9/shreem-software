@@ -1,5 +1,5 @@
 import React from "react";
-import contactUs from "../ContactUsBanner/ContactUsBanner.jpg";
+import contactUs from "./ContactUsBanner.jpg";
 import { Link } from "react-router-dom";
 
 const ContactUsBanner = () => {

@@ -15,7 +15,7 @@ const testimonialData = [
     profession: "Traveller",
   },
   {
-    img: "https://cdn.easyfrontend.com/pictures/testimonial/testimonial22_user3.png",
+    img: "https://cdn.easyfrontend.com/pictures/testimonial/testimonial22_user2.png",
     text: "Working with Shreem Software was a pleasure. Their team not only understood our unique needs but also delivered a robust and scalable product ahead of schedule. Exceptional service!",
     user: "John Alex",
     profession: "Traveller",
