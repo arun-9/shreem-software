@@ -1,11 +1,14 @@
 import { useEffect } from "react";
 //import Navbar from "../Navbar";
-import Header from "../Header Nav Component/Header";
+//import Header from "../Header Nav Component/Header";
+import WhyChooseUs from "../WhyChooseUs/WhyChooseUs";
+import CaseStudies from "../caseStudies/caseStudies";
+import TestimonialSlider from "../TestimonialSlider/TestimonialSlider";
 import MenuSection from "../menuItems/menuItems";
 import MeetOurTeam from "../../components/MeetOurTeam";
 import Testimonials from "../Testimonials/Testimonials";
 import Contact from "../ContactSection/ContactSection";
-import Footer from "../Footer/Footer";
+//import Footer from "../Footer/Footer";
 //import Footer from "../Footer";
 //import Testimonial from "../Testimonail";
 //import ContactUsBanner from "../ContactUsBanner/ContactUsBanner";
@@ -32,14 +35,17 @@ function Homepage() {
   }, []);
   return (
     <>
-      {/*<Navbar />*/}
-      <Header />
+      {/*<Navbar />
+      <Header />*/}
 
       <div className="bg-gradient-to-tr from-violet-100 to-violet-300">
         {" "}
         {/* Violet gradient background */}
         {/*<CarouselComponent />*/}
         <HeroVideo />
+        <WhyChooseUs />
+        <CaseStudies />
+        <TestimonialSlider />
         <AboutSection />
         <MenuSection />
         <MeetOurTeam />
@@ -56,7 +62,7 @@ function Homepage() {
         {/*<Testimonial />*/}{" "}
         {/* reference : https://easyfrontend.com/components/ui/testimonials */}
         <Contact />
-        <Footer />
+        {/*<Footer />*/}
       </div>
     </>
   );

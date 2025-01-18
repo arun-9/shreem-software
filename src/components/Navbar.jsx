@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { HiMenuAlt3, HiMenuAlt1 } from "react-icons/hi";
-import { BiPhoneCall } from "react-icons/bi";
-import Service from "./ServiceCard/ServiceCard";
+import { HiOutlineMenu, HiX } from "react-icons/hi";
 
-const Navbar = () => {
+const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
@@ -12,85 +10,177 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-violet-800 text-white p-2 shadow-md fixed top-0 left-0 right-0 z-50">
-      <div className="container mx-auto flex justify-between items-center">
-        {/* Logo */}
-        <Link to="/" className="text-2xl font-bold">
-          Shreem
-        </Link>
+    <header className="bg-violet-800 text-white fixed top-0 left-0 right-0 z-50">
+      <div className="container mx-auto p-4">
+        <div className="flex items-center justify-between">
+          {/* Logo */}
+          <Link to="/" className="flex items-center">
+            <img src="" alt="Our Logo" className="h-12" />
+          </Link>
 
-        {/* Hamburger Button for Mobile */}
-        <button
-          className="md:hidden flex items-center text-white"
-          onClick={toggleMobileMenu}
-          aria-label="Toggle mobile menu"
-          aria-expanded={isMobileMenuOpen}
-        >
-          {isMobileMenuOpen ? <HiMenuAlt1 size={24} /> : <HiMenuAlt3 size={24} />}
-        </button>
+          {/* Desktop Navigation */}
+          <nav className="hidden xl:flex space-x-8">
+            <Link to="/" className="hover:text-gray-300">
+              Home
+            </Link>
 
-        {/* Desktop Menu */}
-        <div className="hidden md:block">
-          <ul className="flex items-center gap-8">
-            <li className="cursor-pointer">
-              <Link to="/" className="pb-2">
-                Home
-              </Link>
-            </li>
-            <li className="cursor-pointer">
-              <Link to="/about" className="pb-2">
-                About
-              </Link>
-            </li>
+            {/* Company Dropdown */}
+            <details className="relative group">
+              <summary className="hover:text-gray-300 cursor-pointer">Company</summary>
+              <ul className="absolute left-0 bg-white text-gray-800 mt-2 p-4 rounded shadow-md space-y-2">
+                <li>
+                  <Link to="/about-us" className="block hover:text-violet-800">
+                    About us
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/why-choose-us" className="block hover:text-violet-800">
+                    Why choose us
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/our-history" className="block hover:text-violet-800">
+                    Our history
+                  </Link>
+                </li>
+              </ul>
+            </details>
 
-            {/*<li className="cursor-pointer">
-              <Link to="/contact" className="pb-2">
-                Contact
-              </Link>
-            </li>*/}
-            {/* Phone number section */}
-            <div className="flex items-center gap-4">
-              <li>
-                <BiPhoneCall className="h-[40px] w-[40px] rounded-md bg-primary p-2 text-2xl text-white hover:bg-primary/90" />
-              </li>
-              <li>
-                <div>
-                  <p className="text-sm">Call us on</p>
-                  <p className="text-lg">
-                    <a href="tel:+91123456789">+91 123456789</a>
-                  </p>
-                </div>
-              </li>
-            </div>
-          </ul>
+            {/* IT Solutions Dropdown */}
+            <details className="relative group">
+              <summary className="hover:text-gray-300 cursor-pointer">IT Solutions</summary>
+              <ul className="absolute left-0 bg-white text-gray-800 mt-2 p-4 rounded shadow-md space-y-2">
+                <li>
+                  <Link to="/it-services" className="block hover:text-violet-800">
+                    IT Services
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/managed-it-service" className="block hover:text-violet-800">
+                    Managed IT Services
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/mobileapp-development" className="block hover:text-violet-800">
+                    Mobile App Development
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/software-development" className="block hover:text-violet-800">
+                    Software Development
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/web-design" className="block hover:text-violet-800">
+                    Website Designing & Development
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/web3" className="block hover:text-violet-800">
+                    Web3 Solutions
+                  </Link>
+                </li>
+              </ul>
+            </details>
+
+            <Link to="/careers" className="hover:text-gray-300">
+              Careers
+            </Link>
+            <Link to="/contact-us" className="hover:text-gray-300">
+              Contact Us
+            </Link>
+          </nav>
+
+          {/* Mobile Menu Toggle */}
+          <button className="xl:hidden text-white text-2xl" onClick={toggleMobileMenu}>
+            {isMobileMenuOpen ? <HiX /> : <HiOutlineMenu />}
+          </button>
         </div>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <nav className="bg-violet-700 p-4 mt-2 rounded shadow-md xl:hidden">
+            <ul className="space-y-4">
+              <li>
+                <Link to="/" className="block hover:text-gray-300">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <details>
+                  <summary className="cursor-pointer hover:text-gray-300">Company</summary>
+                  <ul className="space-y-2 pl-4">
+                    <li>
+                      <Link to="/about-us" className="block hover:text-gray-300">
+                        About us
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/why-choose-us" className="block hover:text-gray-300">
+                        Why choose us
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/our-history" className="block hover:text-gray-300">
+                        Our history
+                      </Link>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <details>
+                  <summary className="cursor-pointer hover:text-gray-300">IT Solutions</summary>
+                  <ul className="space-y-2 pl-4">
+                    <li>
+                      <Link to="/it-services" className="block hover:text-gray-300">
+                        IT Services
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/managed-it-service" className="block hover:text-gray-300">
+                        Managed IT Services
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/mobileapp-development" className="block hover:text-gray-300">
+                        Mobile App Development
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/software-development" className="block hover:text-gray-300">
+                        Software Development
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/web-design" className="block hover:text-gray-300">
+                        Website Designing & Development
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/web3" className="block hover:text-gray-300">
+                        Web3 Solutions
+                      </Link>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <Link to="/careers" className="block hover:text-gray-300">
+                  Careers
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact-us" className="block hover:text-gray-300">
+                  Contact Us
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        )}
       </div>
-
-      {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden bg-violet-700 p-3">
-          <ul className="space-y-3">
-            <li>
-              <Link to="/" className="block hover:text-gray-200" onClick={toggleMobileMenu}>
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link to="/about" className="block hover:text-gray-200" onClick={toggleMobileMenu}>
-                About
-              </Link>
-            </li>
-
-            {/*<li>
-              <Link to="/contact" className="block hover:text-gray-200" onClick={toggleMobileMenu}>
-                Contact
-              </Link>
-            </li>*/}
-          </ul>
-        </div>
-      )}
-    </nav>
+    </header>
   );
 };
 
-export default Navbar;
+export default Header;
