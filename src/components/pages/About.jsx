@@ -8,6 +8,7 @@ const About = () => {
       <Navbar />
       <div className="bg-purple-400 px-4 py-8">
         {/* Company Vision & Mission */}
+
         <section className="">
           <h1 className="text-4xl font-bold text-center mb-6 pt-24">About Us</h1>
           <p className="text-lg text-center max-w-3xl mx-auto">
