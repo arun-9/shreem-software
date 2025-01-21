@@ -27,7 +27,7 @@ const testimonials = [
 
 const TestimonialSlider = () => {
   return (
-    <section className="py-16 bg-violet-50 dark:bg-gray-900">
+    <section className="py-16 " style={{ backgroundColor: "#F3E5F5" }}>
       <div className="container mx-auto px-4">
         {/* Heading */}
         <motion.div
