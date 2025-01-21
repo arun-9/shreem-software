@@ -1,17 +1,17 @@
 import React from "react";
 import { motion } from "framer-motion";
-
+import img from "./about-image.jpg";
 function ContactUs() {
   return (
     <section className="py-16 " style={{ backgroundColor: "#F3E5F5" }}>
       <div className="container mx-auto px-6">
-        <div className="flex flex-wrap items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Content Section */}
           <motion.div
-            className="w-full lg:w-1/2 md:w-3/5 text-left"
-            initial={{ opacity: 0, x: -50 }}
+            className="flex flex-col justify-center"
+            initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
           >
             <div>
               <h6 className="text-lg text-violet-600 font-medium mb-3">OUR SOLUTION</h6>
@@ -32,6 +32,19 @@ function ContactUs() {
                 Contact Us
               </a>
             </div>
+          </motion.div>
+          {/* Image Section */}
+          <motion.div
+            className="relative"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <img className="w-full rounded-lg shadow-lg" src={img} alt="Shree Software Vision" />
+            <p className="mt-6 text-gray-600 italic">
+              At Shree Software Pvt. Ltd., we deliver cutting-edge technology solutions, enabling
+              businesses to thrive in a digital-first world.
+            </p>
           </motion.div>
         </div>
       </div>

@@ -54,7 +54,7 @@ const clientImages = [
 
 const RecentClients = () => {
   return (
-    <section className="p-12 bg-violet-50">
+    <section className="p-12 bg-violet-50 dark:bg-gray-900">
       <div className="container mx-auto text-center">
         {/* Animated Heading */}
         <motion.h3

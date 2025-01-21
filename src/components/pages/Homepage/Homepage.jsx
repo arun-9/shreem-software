@@ -46,20 +46,20 @@ function Homepage() {
         {/*<CarouselComponent />*/}
         <HeroVideo />
         <Stats />
-        <AboutSection />
-        <RecentClients />
-        <WhyChooseUs />
         <ContactUs />
+        {/*<AboutSection />*/}
+        <WhyChooseUs />
         <CaseStudies />
+        <RecentClients />
         <TestimonialSlider />
-        <MenuSection />
-        {/*<MeetOurTeam />
+        {/*<MenuSection />
+        <MeetOurTeam />
         <Testimonials />*/}
         {/* reference : https://tailwindflex.com/@samuel33/hero-with-video-background */}
         {/*<Service />*/}
         {/*<ServicesSection />
-        <ProcessSection />*/}
-        <TabSection />
+        <ProcessSection />
+        <TabSection />*/}
         {/*<IndustriesSection />*/}
         {/*<CallToAction />*/}
         {/*<ContactUsBanner />*/}
