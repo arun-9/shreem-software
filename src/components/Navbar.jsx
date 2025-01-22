@@ -68,9 +68,9 @@ const Header = () => {
                       <Link to="/web-applications" className="block px-4 py-2 hover:bg-violet-700">
                         Web Application
                       </Link>
-                      <Link to="/web-development" className="block px-4 py-2 hover:bg-violet-700">
+                      {/*<Link to="/web-development" className="block px-4 py-2 hover:bg-violet-700">
                         Web Development
-                      </Link>
+                      </Link>*/}
                       <Link
                         to="/e-commerce-solutions"
                         className="block px-4 py-2 hover:bg-violet-700"

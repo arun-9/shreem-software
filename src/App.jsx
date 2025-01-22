@@ -6,8 +6,9 @@ import Footer from "./components/Unused Components/Footer";
 import Homepage from "./components/pages/Homepage/Homepage";
 import CareersPage from "./components/pages/CareersPage/CareersPage";
 import ContactPage from "./components/pages/ContactPage/ContactPage";
-import Login from "./components/Login/Login";
-import IT_Services_Page from "./components/pages/Solution/IT-Services/IT-ServicesPage";
+import MobileAppDevelopment from "./components/pages/Solution/MobileAppDevelopment";
+import WebAppDevelopment from "./components/pages/Solution/WebAppDevelopment";
+import EcommerceSolutions from "./components/pages/Solution/EcommerceSolutions";
 //import About from "./components/pages/About";
 
 //import Contact from "./components/pages/Contact";
@@ -20,7 +21,9 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/careers" element={<CareersPage />} />
         <Route path="/contact-us" element={<ContactPage />} />
-        <Route path="/it-services" element={<IT_Services_Page />} />
+        <Route path="/android-ios-cross-platform" element={<MobileAppDevelopment />} />
+        <Route path="/web-applications" element={<WebAppDevelopment />} />
+        <Route path="/e-commerce-solutions" element={<EcommerceSolutions />} />
         {/*<Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />*/}
       </Routes>
