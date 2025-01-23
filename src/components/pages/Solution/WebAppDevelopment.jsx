@@ -3,9 +3,17 @@ import { motion } from "framer-motion";
 import { FaDesktop, FaServer, FaReact } from "react-icons/fa";
 import img1 from "./web-application-development.png";
 import img2 from "./web-solution.png";
+import Breadcrumb from "./Breadcrumb";
 const WebAppDevelopment = () => {
   return (
     <div className="site-wrapper-reveal">
+      <Breadcrumb
+        title="Contact"
+        links={[
+          { label: "Home", to: "/" },
+          { label: "Web Application", to: null },
+        ]}
+      />
       {/* Feature Images Wrapper */}
       <div className="feature-images-wrapper py-24">
         <div className="container mx-auto">

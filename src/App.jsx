@@ -9,6 +9,8 @@ import ContactPage from "./components/pages/ContactPage/ContactPage";
 import MobileAppDevelopment from "./components/pages/Solution/MobileAppDevelopment";
 import WebAppDevelopment from "./components/pages/Solution/WebAppDevelopment";
 import EcommerceSolutions from "./components/pages/Solution/EcommerceSolutions";
+import AWSCloudServices from "./components/pages/Solution/AWSCloudServices";
+import SoftwareConsultingServices from "./components/pages/Solution/SoftwareConsultingServices";
 //import About from "./components/pages/About";
 
 //import Contact from "./components/pages/Contact";
@@ -24,6 +26,8 @@ function App() {
         <Route path="/android-ios-cross-platform" element={<MobileAppDevelopment />} />
         <Route path="/web-applications" element={<WebAppDevelopment />} />
         <Route path="/e-commerce-solutions" element={<EcommerceSolutions />} />
+        <Route path="/aws-solutions" element={<AWSCloudServices />} />
+        <Route path="/software-consulting" element={<SoftwareConsultingServices />} />
         {/*<Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />*/}
       </Routes>

@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="footer-section bg-gray-900 text-gray-300 py-6">
       <div className="container mx-auto text-center">
         {/* Copyright Text */}
-        <p className="copyright-text mb-4">© 2024 Shreem Software Pvt. Ltd.</p>
+        <p className="copyright-text mb-4">© 2025 Shree Software Pvt. Ltd.</p>
 
         {/* Social Links */}
         <div className="social-link-list flex justify-center gap-6 mb-4">

@@ -9,12 +9,12 @@ const Footer = () => {
             <div className="px-4 py-8">
               <h1 className="mb-3 text-justify text-xl font-bold sm:text-left sm:text-3xl">
                 <a href="/#home">
-                  Shreem
+                  Shree
                   <span className="inline-block font-bold text-primary"> Software Pvt. Ltd.</span>
                 </a>
               </h1>
               <p>
-                At Shreem Software Pvt. Ltd., we specialize in delivering cutting-edge software
+                At Shree Software Pvt. Ltd., we specialize in delivering cutting-edge software
                 solutions designed to drive innovation, streamline processes, and elevate your
                 business growth.
               </p>
@@ -98,7 +98,7 @@ const Footer = () => {
           </div>
           <div>
             <div className="border-t-2 border-gray-300/50 py-6 text-center">
-              © 2024 Shreem Software Pvt. Ltd. | All Rights Reserved.
+              © 2025 Shree Software Pvt. Ltd. | All Rights Reserved.
             </div>
           </div>
         </section>

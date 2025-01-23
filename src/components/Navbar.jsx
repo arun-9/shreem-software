@@ -45,8 +45,8 @@ const Header = () => {
             <div className="relative group">
               <button className="hover:text-gray-300">Services</button>
               <div className="absolute right-0 mt-2 w-48 bg-violet-800 shadow-lg rounded-lg opacity-0 group-hover:opacity-100 transition-opacity">
-                <Link to="/erp-solutions" className="block px-4 py-2 hover:bg-violet-700">
-                  ERP Solutions
+                <Link to="/aws-solutions" className="block px-4 py-2 hover:bg-violet-700">
+                  AWS Solutions
                 </Link>
                 {/* Application Development Dropdown */}
                 <div className="relative">
@@ -116,11 +116,11 @@ const Header = () => {
                   <ul className="space-y-2 pl-4">
                     <li>
                       <Link
-                        to="/erp-solutions"
+                        to="/aws-solutions"
                         className="block hover:text-gray-300"
                         onClick={closeMobileMenu}
                       >
-                        ERP Solutions
+                        AWS Solutions
                       </Link>
                     </li>
                     <li>
