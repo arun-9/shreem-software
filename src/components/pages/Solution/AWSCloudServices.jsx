@@ -1,17 +1,17 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaAndroid, FaApple, FaReact } from "react-icons/fa";
-import img1 from "./mobile-application-development.jpeg";
-import img2 from "./mobile-solution.jpg";
+import { FaCloud, FaLock, FaDatabase } from "react-icons/fa";
+import img1 from "./AWS-Couv.png";
 import Breadcrumb from "./Breadcrumb";
-const MobileAppDevelopment = () => {
+import img2 from "./aws3.svg";
+const AWSCloudServices = () => {
   return (
     <div className="site-wrapper-reveal">
       <Breadcrumb
         title="Contact"
         links={[
           { label: "Home", to: "/" },
-          { label: "Mobile Application", to: null },
+          { label: "AWS Cloud", to: null },
         ]}
       />
       {/* Feature Images Wrapper */}
@@ -24,7 +24,7 @@ const MobileAppDevelopment = () => {
               <div className="w-full lg:w-1/2">
                 <motion.img
                   src={img1}
-                  alt="Mobile App Development"
+                  alt="AWS Cloud Services"
                   className="img-fluid rounded-lg shadow-lg"
                   initial={{ opacity: 0, x: -50 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -39,15 +39,16 @@ const MobileAppDevelopment = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <h4 className="text-2xl font-bold mb-4">Mobile App Development</h4>
+                  <h4 className="text-2xl font-bold mb-4">AWS Cloud Services</h4>
                   <p className="text-gray-600 mb-6">
-                    At <b>Shree Software Pvt. Ltd.</b>, we specialize in creating high-quality,
-                    feature-rich mobile applications tailored to your business needs. From design to
-                    deployment, we deliver solutions that help you stay ahead in the digital age.
+                    At <b>Shree Software Pvt. Ltd.</b>, we leverage Amazon Web Services (AWS) to
+                    deliver secure, scalable, and cost-efficient cloud solutions for businesses of
+                    all sizes. Our AWS expertise ensures you can focus on innovation while we handle
+                    the complexities of cloud management.
                   </p>
                   <p className="text-gray-600 mb-6">
-                    Whether it's Android, iOS, or cross-platform solutions, our expert team ensures
-                    a seamless and engaging user experience.
+                    From cloud migration to custom solutions, we provide end-to-end AWS services
+                    tailored to your business needs.
                   </p>
                   <a
                     href="#contact"
@@ -67,29 +68,29 @@ const MobileAppDevelopment = () => {
                 Our Expertise
               </h6>
               <h3 className="text-3xl font-bold">
-                Crafting Scalable & Innovative Mobile Solutions
+                Powering Your Business with AWS Cloud Solutions
               </h3>
             </div>
             <div className="flex flex-wrap justify-center">
               {/* Service Cards */}
               {[
                 {
-                  title: "Android App Development",
+                  title: "Cloud Migration",
                   description:
-                    "Leverage the power of Android with our robust and secure mobile apps, designed to captivate your audience.",
-                  icon: <FaAndroid className="text-green-500 text-4xl" />,
+                    "Seamlessly migrate your applications and infrastructure to AWS with minimal downtime and maximum efficiency.",
+                  icon: <FaCloud className="text-blue-500 text-4xl" />,
                 },
                 {
-                  title: "iOS App Development",
+                  title: "Security & Compliance",
                   description:
-                    "Create cutting-edge iOS applications that combine elegance and performance for Apple devices.",
-                  icon: <FaApple className="text-gray-800 text-4xl" />,
+                    "Ensure your data and applications are secure with AWS's advanced security features and compliance certifications.",
+                  icon: <FaLock className="text-green-500 text-4xl" />,
                 },
                 {
-                  title: "Cross-Platform Development",
+                  title: "Data Storage & Management",
                   description:
-                    "Save time and resources with cross-platform apps built using React Native and Flutter.",
-                  icon: <FaReact className="text-blue-500 text-4xl" />,
+                    "Store and manage your data securely with AWS's scalable storage options like S3, RDS, and DynamoDB.",
+                  icon: <FaDatabase className="text-purple-500 text-4xl" />,
                 },
               ].map((service, index) => (
                 <motion.div
@@ -120,15 +121,16 @@ const MobileAppDevelopment = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <h4 className="text-2xl font-bold mb-4">Why Choose Us?</h4>
+                  <h4 className="text-2xl font-bold mb-4">Why Choose AWS with Us?</h4>
                   <p className="text-gray-600 mb-6">
-                    <b>Shree Software Pvt. Ltd.</b> is dedicated to delivering mobile solutions that
-                    align with your business goals. We combine creativity, technology, and industry
-                    expertise to ensure your app makes a lasting impact.
+                    <b>Shree Software Pvt. Ltd.</b> has a dedicated team of AWS-certified experts
+                    ready to help you unlock the full potential of cloud computing. Whether you're
+                    looking to optimize costs, improve scalability, or enhance security, we deliver
+                    tailor-made AWS solutions to suit your needs.
                   </p>
                   <p className="text-gray-600">
-                    Our team is equipped to handle diverse industries, providing solutions tailored
-                    for Retail, Healthcare, Education, E-commerce, and more.
+                    Our solutions cater to industries like Finance, Healthcare, E-commerce, and
+                    more, ensuring that your business is cloud-ready for the future.
                   </p>
                 </motion.div>
               </div>
@@ -136,7 +138,7 @@ const MobileAppDevelopment = () => {
               <div className="w-full lg:w-1/2 lg:ml-auto mt-8 lg:mt-0">
                 <motion.img
                   src={img2}
-                  alt="Mobile Solutions"
+                  alt="AWS Expertise"
                   className="img-fluid rounded-lg shadow-lg"
                   initial={{ opacity: 0, x: 50 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -151,4 +153,4 @@ const MobileAppDevelopment = () => {
   );
 };
 
-export default MobileAppDevelopment;
+export default AWSCloudServices;

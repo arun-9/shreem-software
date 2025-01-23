@@ -1,17 +1,16 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaAndroid, FaApple, FaReact } from "react-icons/fa";
-import img1 from "./mobile-application-development.jpeg";
-import img2 from "./mobile-solution.jpg";
+import { FaChartLine, FaCogs, FaLightbulb } from "react-icons/fa";
+import img1 from "./consult.avif";
 import Breadcrumb from "./Breadcrumb";
-const MobileAppDevelopment = () => {
+const SoftwareConsultingServices = () => {
   return (
     <div className="site-wrapper-reveal">
       <Breadcrumb
         title="Contact"
         links={[
           { label: "Home", to: "/" },
-          { label: "Mobile Application", to: null },
+          { label: "Software Consultant", to: null },
         ]}
       />
       {/* Feature Images Wrapper */}
@@ -24,7 +23,7 @@ const MobileAppDevelopment = () => {
               <div className="w-full lg:w-1/2">
                 <motion.img
                   src={img1}
-                  alt="Mobile App Development"
+                  alt="Software Consulting"
                   className="img-fluid rounded-lg shadow-lg"
                   initial={{ opacity: 0, x: -50 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -39,15 +38,16 @@ const MobileAppDevelopment = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <h4 className="text-2xl font-bold mb-4">Mobile App Development</h4>
+                  <h4 className="text-2xl font-bold mb-4">Software Consulting Services</h4>
                   <p className="text-gray-600 mb-6">
-                    At <b>Shree Software Pvt. Ltd.</b>, we specialize in creating high-quality,
-                    feature-rich mobile applications tailored to your business needs. From design to
-                    deployment, we deliver solutions that help you stay ahead in the digital age.
+                    At <b>Shree Software Pvt. Ltd.</b>, we empower businesses by offering expert
+                    software consulting services that align with your goals. Our team of experienced
+                    consultants helps you plan, develop, and implement customized software solutions
+                    to drive efficiency and innovation.
                   </p>
                   <p className="text-gray-600 mb-6">
-                    Whether it's Android, iOS, or cross-platform solutions, our expert team ensures
-                    a seamless and engaging user experience.
+                    Whether you're looking to adopt new technologies, optimize processes, or build a
+                    digital transformation strategy, we are here to guide you every step of the way.
                   </p>
                   <a
                     href="#contact"
@@ -66,30 +66,28 @@ const MobileAppDevelopment = () => {
               <h6 className="text-sm font-semibold text-indigo-600 uppercase mb-2">
                 Our Expertise
               </h6>
-              <h3 className="text-3xl font-bold">
-                Crafting Scalable & Innovative Mobile Solutions
-              </h3>
+              <h3 className="text-3xl font-bold">Tailored Software Solutions for Every Business</h3>
             </div>
             <div className="flex flex-wrap justify-center">
               {/* Service Cards */}
               {[
                 {
-                  title: "Android App Development",
+                  title: "Technology Strategy",
                   description:
-                    "Leverage the power of Android with our robust and secure mobile apps, designed to captivate your audience.",
-                  icon: <FaAndroid className="text-green-500 text-4xl" />,
+                    "We help you create a robust IT strategy, aligned with your business objectives, to ensure sustainable growth.",
+                  icon: <FaChartLine className="text-blue-500 text-4xl" />,
                 },
                 {
-                  title: "iOS App Development",
+                  title: "Custom Software Development",
                   description:
-                    "Create cutting-edge iOS applications that combine elegance and performance for Apple devices.",
-                  icon: <FaApple className="text-gray-800 text-4xl" />,
+                    "Our consulting team helps you design and develop custom software solutions that address your unique challenges.",
+                  icon: <FaCogs className="text-gray-800 text-4xl" />,
                 },
                 {
-                  title: "Cross-Platform Development",
+                  title: "Digital Transformation",
                   description:
-                    "Save time and resources with cross-platform apps built using React Native and Flutter.",
-                  icon: <FaReact className="text-blue-500 text-4xl" />,
+                    "Accelerate your business growth with expert guidance on adopting cutting-edge technologies and processes.",
+                  icon: <FaLightbulb className="text-yellow-500 text-4xl" />,
                 },
               ].map((service, index) => (
                 <motion.div
@@ -122,21 +120,23 @@ const MobileAppDevelopment = () => {
                 >
                   <h4 className="text-2xl font-bold mb-4">Why Choose Us?</h4>
                   <p className="text-gray-600 mb-6">
-                    <b>Shree Software Pvt. Ltd.</b> is dedicated to delivering mobile solutions that
-                    align with your business goals. We combine creativity, technology, and industry
-                    expertise to ensure your app makes a lasting impact.
+                    At <b>Shree Software Pvt. Ltd.</b>, we combine industry knowledge, technical
+                    expertise, and a client-first approach to deliver impactful consulting services.
+                    Our team works closely with you to understand your business challenges and
+                    provide solutions that fit your unique needs.
                   </p>
                   <p className="text-gray-600">
-                    Our team is equipped to handle diverse industries, providing solutions tailored
-                    for Retail, Healthcare, Education, E-commerce, and more.
+                    We have successfully partnered with businesses across industries like
+                    Healthcare, Retail, E-commerce, Education, and more, ensuring their software
+                    investments deliver measurable results.
                   </p>
                 </motion.div>
               </div>
               {/* Right Section: Image */}
               <div className="w-full lg:w-1/2 lg:ml-auto mt-8 lg:mt-0">
                 <motion.img
-                  src={img2}
-                  alt="Mobile Solutions"
+                  src=""
+                  alt="Expert Software Consulting"
                   className="img-fluid rounded-lg shadow-lg"
                   initial={{ opacity: 0, x: 50 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -151,4 +151,4 @@ const MobileAppDevelopment = () => {
   );
 };
 
-export default MobileAppDevelopment;
+export default SoftwareConsultingServices;

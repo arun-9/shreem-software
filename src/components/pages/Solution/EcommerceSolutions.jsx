@@ -2,10 +2,18 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaShoppingCart, FaCreditCard, FaTruck } from "react-icons/fa";
 import img1 from "./e-commerce1.jpg";
-
+import img2 from "./e-commerce2.jpg";
+import Breadcrumb from "./Breadcrumb";
 const EcommerceSolutions = () => {
   return (
     <div className="site-wrapper-reveal">
+      <Breadcrumb
+        title="Contact"
+        links={[
+          { label: "Home", to: "/" },
+          { label: "E-commerce Solution", to: null },
+        ]}
+      />
       {/* Feature Images Wrapper */}
       <div className="feature-images-wrapper py-24">
         <div className="container mx-auto">
@@ -129,7 +137,7 @@ const EcommerceSolutions = () => {
               {/* Right Section: Image */}
               <div className="w-full lg:w-1/2 lg:ml-auto mt-8 lg:mt-0">
                 <motion.img
-                  src="assets/images/banners/ecommerce-screen-2.png"
+                  src={img2}
                   alt="E-commerce Solutions"
                   className="img-fluid rounded-lg shadow-lg"
                   initial={{ opacity: 0, x: 50 }}
