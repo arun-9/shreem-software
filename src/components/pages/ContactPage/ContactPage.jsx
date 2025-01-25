@@ -1,6 +1,6 @@
 import React from "react";
 import Breadcrumb from "./Breadcrumb";
-import ContactUsWithCaptcha from "./ContactUs";
+import ContactSection from "./ContactUs";
 const ContactPage = () => {
   return (
     <div>
@@ -12,7 +12,7 @@ const ContactPage = () => {
         ]}
       />
       <div className="min-h-screen bg-gray-50">
-        <ContactUsWithCaptcha />
+        <ContactSection />
       </div>
     </div>
   );
