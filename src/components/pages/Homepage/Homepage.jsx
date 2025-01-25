@@ -29,7 +29,7 @@ import CallToAction from "../../CTA/CallToAction";
 
 function Homepage() {
   useEffect(() => {
-    document.title = "SabMedia | Home";
+    document.title = "Shree | Home";
   }, []);
   /* automatically scroll to the top of the page */
   useEffect(() => {
