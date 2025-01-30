@@ -1,35 +1,27 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { HiOutlineMenu, HiX } from "react-icons/hi";
+import { motion } from "framer-motion";
 
 const Header = () => {
-  const [openDropdown, setOpenDropdown] = useState(null);
+  const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isApplicationDevOpen, setIsApplicationDevOpen] = useState(false); // state for toggling the dropdown
 
-  const closeDesktopMenu = () => {
-    setOpenDropdown(null);
-  };
-
-  const toggleDropdown = (menu) => {
-    setOpenDropdown((prev) => (prev === menu ? null : menu));
+  const toggleServicesDropdown = () => {
+    setIsServicesDropdownOpen((prev) => !prev);
   };
 
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
+    setIsMobileMenuOpen((prev) => !prev);
   };
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
   };
 
-  const toggleApplicationDevDropdown = () => {
-    setIsApplicationDevOpen(!isApplicationDevOpen); // toggles the dropdown
-  };
-
   return (
     <header className="bg-violet-800 text-white fixed top-0 left-0 right-0 z-50">
-      <div className="container mx-auto p-2 ">
+      <div className="container mx-auto p-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center">
@@ -37,53 +29,71 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex space-x-8">
+          <nav className="hidden lg:flex space-x-8 items-center">
             <Link to="/" className="hover:text-gray-300">
               Home
             </Link>
 
-            <div className="relative group">
-              <button className="hover:text-gray-300">Services</button>
-              <div className="absolute right-0 mt-2 w-48 bg-violet-800 shadow-lg rounded-lg opacity-0 group-hover:opacity-100 transition-opacity">
-                <Link to="/aws-solutions" className="block px-4 py-2 hover:bg-violet-700">
-                  AWS Solutions
-                </Link>
-                {/* Application Development Dropdown */}
-                <div className="relative">
-                  <button
-                    className="w-full text-left px-4 py-2 hover:bg-violet-700 flex justify-between"
-                    onClick={toggleApplicationDevDropdown}
-                  >
-                    Application Development
-                    <span>{isApplicationDevOpen ? "▲" : "▼"}</span> {/* Arrow icon */}
-                  </button>
-                  {isApplicationDevOpen && ( // conditionally render dropdown
-                    <div className="absolute left-full top-0 mt-2 w-48 bg-violet-800 shadow-lg rounded-lg">
+            {/* Mega Dropdown for Services */}
+            <div
+              className="relative"
+              onMouseEnter={() => setIsServicesDropdownOpen(true)}
+              onMouseLeave={() => setIsServicesDropdownOpen(false)}
+            >
+              <button className="flex items-center space-x-2 hover:text-gray-300 focus:outline-none">
+                <span>Services</span>
+                <span>{isServicesDropdownOpen ? "▲" : "▼"}</span>
+              </button>
+
+              {isServicesDropdownOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  className="absolute right-1 px-90 mt-2 w-[800px] bg-violet-800 shadow-lg rounded-lg p-4"
+                >
+                  <div className="grid grid-cols-2 gap-4 ">
+                    <div>
+                      <h3 className="text-lg font-semibold border-b pb-2 mb-2">Cloud & Hosting</h3>
                       <Link
-                        to="/android-ios-cross-platform"
-                        className="block px-4 py-2 hover:bg-violet-700"
+                        to="/aws-solutions"
+                        className="block px-4 py-2 hover:bg-violet-700 rounded"
                       >
-                        Mobile Application
+                        AWS Solutions
                       </Link>
-                      <Link to="/web-applications" className="block px-4 py-2 hover:bg-violet-700">
-                        Web Application
-                      </Link>
-                      {/*<Link to="/web-development" className="block px-4 py-2 hover:bg-violet-700">
-                        Web Development
-                      </Link>*/}
                       <Link
                         to="/e-commerce-solutions"
-                        className="block px-4 py-2 hover:bg-violet-700"
+                        className="block px-4 py-2 hover:bg-violet-700 rounded"
                       >
                         E-commerce Solutions
                       </Link>
                     </div>
-                  )}
-                </div>
-                <Link to="/software-consulting" className="block px-4 py-2 hover:bg-violet-700">
-                  Software Consulting Service
-                </Link>
-              </div>
+                    <div>
+                      <h3 className="text-lg font-semibold border-b pb-2 mb-2">
+                        Development Services
+                      </h3>
+                      <Link
+                        to="/android-ios-cross-platform"
+                        className="block px-4 py-2 hover:bg-violet-700 rounded"
+                      >
+                        Mobile Application
+                      </Link>
+                      <Link
+                        to="/web-applications"
+                        className="block px-4 py-2 hover:bg-violet-700 rounded"
+                      >
+                        Web Application
+                      </Link>
+                      <Link
+                        to="/software-consulting"
+                        className="block px-4 py-2 hover:bg-violet-700 rounded"
+                      >
+                        Software Consulting Service
+                      </Link>
+                    </div>
+                  </div>
+                </motion.div>
+              )}
             </div>
 
             <Link to="/careers" className="hover:text-gray-300">
@@ -109,7 +119,6 @@ const Header = () => {
                   Home
                 </Link>
               </li>
-
               <li>
                 <details>
                   <summary className="cursor-pointer hover:text-gray-300">Services</summary>
@@ -143,15 +152,6 @@ const Header = () => {
                     </li>
                     <li>
                       <Link
-                        to="/web-development"
-                        className="block hover:text-gray-300"
-                        onClick={closeMobileMenu}
-                      >
-                        Web Development
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
                         to="/e-commerce-solutions"
                         className="block hover:text-gray-300"
                         onClick={closeMobileMenu}
@@ -159,10 +159,18 @@ const Header = () => {
                         E-commerce Solutions
                       </Link>
                     </li>
+                    <li>
+                      <Link
+                        to="/software-consulting"
+                        className="block hover:text-gray-300"
+                        onClick={closeMobileMenu}
+                      >
+                        Software Consulting Service
+                      </Link>
+                    </li>
                   </ul>
                 </details>
               </li>
-
               <li>
                 <Link to="/careers" className="block hover:text-gray-300" onClick={closeMobileMenu}>
                   Careers

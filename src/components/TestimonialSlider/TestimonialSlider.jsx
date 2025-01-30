@@ -1,5 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Pagination, Navigation, Autoplay } from "swiper/modules";
 
 const testimonials = [
   {
@@ -23,13 +28,33 @@ const testimonials = [
     image:
       "https://images.unsplash.com/photo-1524503033411-c9566986fc8f?crop=entropy&cs=tinysrgb&w=400&fit=max",
   },
+  {
+    text: "The team at Shree Software provided excellent support and development services. We saw remarkable growth in our operations.",
+    name: "Robert Williams",
+    role: "Operations Head",
+    image:
+      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?crop=entropy&cs=tinysrgb&w=400&fit=max",
+  },
+  {
+    text: "Exceptional experience working with them! Their tech expertise helped us scale our platform seamlessly.",
+    name: "Sophia Lee",
+    role: "Tech Lead",
+    image:
+      "https://images.unsplash.com/photo-1554151228-14d9def656e4?crop=entropy&cs=tinysrgb&w=400&fit=max",
+  },
+  {
+    text: "Shree Software's attention to detail and innovative mindset set them apart from the competition.",
+    name: "Daniel Martin",
+    role: "CTO",
+    image:
+      "https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?crop=entropy&cs=tinysrgb&w=400&fit=max",
+  },
 ];
 
 const TestimonialSlider = () => {
   return (
-    <section className="py-16 " style={{ backgroundColor: "#F3E5F5" }}>
+    <section className="py-16" style={{ backgroundColor: "#F3E5F5" }}>
       <div className="container mx-auto px-4">
-        {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -42,34 +67,47 @@ const TestimonialSlider = () => {
           </p>
         </motion.div>
 
-        {/* Testimonial Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <Swiper
+          modules={[Pagination, Navigation, Autoplay]}
+          spaceBetween={30}
+          slidesPerView={1}
+          pagination={{ clickable: true }}
+          navigation
+          autoplay={{ delay: 5000, disableOnInteraction: false }}
+          breakpoints={{
+            640: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          className="pb-10"
+        >
           {testimonials.map((testimonial, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
-              className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow duration-300"
-            >
-              <div className="flex items-center space-x-4 mb-4">
-                <img
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                  className="w-16 h-16 rounded-full object-cover"
-                />
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 dark:text-gray-200">
-                    {testimonial.name}
-                  </h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">{testimonial.role}</p>
+            <SwiperSlide key={index}>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+                className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow duration-300"
+              >
+                <div className="flex items-center space-x-4 mb-4">
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className="w-16 h-16 rounded-full object-cover"
+                  />
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 dark:text-gray-200">
+                      {testimonial.name}
+                    </h4>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">{testimonial.role}</p>
+                  </div>
                 </div>
-              </div>
-              <p className="text-gray-600 dark:text-gray-400">{testimonial.text}</p>
-            </motion.div>
+                <p className="text-gray-600 dark:text-gray-400">{testimonial.text}</p>
+              </motion.div>
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
       </div>
     </section>
   );
