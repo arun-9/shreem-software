@@ -5,6 +5,7 @@ import Stats from "./Stats";
 import WhyChooseUs from "../../WhyChooseUs/WhyChooseUs";
 import ContactUs from "../Homepage/ContactUs";
 import CaseStudies from "../../caseStudies/caseStudies";
+import AgileMethodologyProcess from "../../AgileMethodologyProcess/AgileMethodologyProcess";
 import TestimonialSlider from "../../TestimonialSlider/TestimonialSlider";
 import MenuSection from "../../menuItems/menuItems";
 //import MeetOurTeam from "../../MeetOurTeam";
@@ -51,6 +52,7 @@ function Homepage() {
         <WhyChooseUs />
         <CaseStudies />
         <RecentClients />
+        <AgileMethodologyProcess />
         <TestimonialSlider />
         {/*<MenuSection />
         <MeetOurTeam />
