@@ -23,7 +23,7 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/careers" element={<CareersPage />} />
         <Route path="/contact-us" element={<ContactPage />} />
-        <Route path="/android-ios-cross-platform" element={<MobileAppDevelopment />} />
+        <Route path="/mobile-application" element={<MobileAppDevelopment />} />
         <Route path="/web-applications" element={<WebAppDevelopment />} />
         <Route path="/e-commerce-solutions" element={<EcommerceSolutions />} />
         <Route path="/aws-solutions" element={<AWSCloudServices />} />

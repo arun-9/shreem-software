@@ -1,23 +1,49 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { HiOutlineMenu, HiX } from "react-icons/hi";
+import { HiOutlineMenu, HiX, HiChevronDown, HiChevronUp } from "react-icons/hi";
+import { HiCloud, HiShoppingCart, HiDeviceMobile, HiGlobeAlt, HiLightBulb } from "react-icons/hi";
 import { motion } from "framer-motion";
 
 const Header = () => {
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeService, setActiveService] = useState(null);
 
-  const toggleServicesDropdown = () => {
-    setIsServicesDropdownOpen((prev) => !prev);
-  };
+  const services = [
+    {
+      name: "AWS Solutions",
+      path: "/aws-solutions",
+      category: "Cloud & Hosting",
+      icon: <HiCloud />,
+    },
+    {
+      name: "E-commerce Solutions",
+      path: "/e-commerce-solutions",
+      category: "Cloud & Hosting",
+      icon: <HiShoppingCart />,
+    },
+    {
+      name: "Mobile Application",
+      path: "/mobile-application",
+      category: "Development Services",
+      icon: <HiDeviceMobile />,
+    },
+    {
+      name: "Web Application",
+      path: "/web-applications",
+      category: "Development Services",
+      icon: <HiGlobeAlt />,
+    },
+    {
+      name: "Software Consulting",
+      path: "/software-consulting",
+      category: "Development Services",
+      icon: <HiLightBulb />,
+    },
+  ];
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen((prev) => !prev);
-  };
-
-  const closeMobileMenu = () => {
-    setIsMobileMenuOpen(false);
-  };
+  const toggleMobileMenu = () => setIsMobileMenuOpen((prev) => !prev);
+  const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   return (
     <header className="bg-violet-800 text-white fixed top-0 left-0 right-0 z-50">
@@ -42,7 +68,7 @@ const Header = () => {
             >
               <button className="flex items-center space-x-2 hover:text-gray-300 focus:outline-none">
                 <span>Services</span>
-                <span>{isServicesDropdownOpen ? "▲" : "▼"}</span>
+                {isServicesDropdownOpen ? <HiChevronUp /> : <HiChevronDown />}
               </button>
 
               {isServicesDropdownOpen && (
@@ -50,47 +76,32 @@ const Header = () => {
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
-                  className="absolute right-1 px-90 mt-2 w-[800px] bg-violet-800 shadow-lg rounded-lg p-4"
+                  className="grid grid-cols-1 justify-items-end px-90 mt-2 w-auto bg-violet-400 shadow-lg rounded-lg p-4"
                 >
-                  <div className="grid grid-cols-2 gap-4 ">
-                    <div>
-                      <h3 className="text-lg font-semibold border-b pb-2 mb-2">Cloud & Hosting</h3>
-                      <Link
-                        to="/aws-solutions"
-                        className="block px-4 py-2 hover:bg-violet-700 rounded"
-                      >
-                        AWS Solutions
-                      </Link>
-                      <Link
-                        to="/e-commerce-solutions"
-                        className="block px-4 py-2 hover:bg-violet-700 rounded"
-                      >
-                        E-commerce Solutions
-                      </Link>
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold border-b pb-2 mb-2">
-                        Development Services
-                      </h3>
-                      <Link
-                        to="/android-ios-cross-platform"
-                        className="block px-4 py-2 hover:bg-violet-700 rounded"
-                      >
-                        Mobile Application
-                      </Link>
-                      <Link
-                        to="/web-applications"
-                        className="block px-4 py-2 hover:bg-violet-700 rounded"
-                      >
-                        Web Application
-                      </Link>
-                      <Link
-                        to="/software-consulting"
-                        className="block px-4 py-2 hover:bg-violet-700 rounded"
-                      >
-                        Software Consulting Service
-                      </Link>
-                    </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    {["Cloud & Hosting", "Development Services"].map((category) => (
+                      <div key={category}>
+                        <h3 className="text-lg font-semibold border-b pb-2 mb-2">{category}</h3>
+                        {services
+                          .filter((service) => service.category === category)
+                          .map((service) => (
+                            <Link
+                              key={service.name}
+                              to={service.path}
+                              onMouseEnter={() => setActiveService(service.name)}
+                              onMouseLeave={() => setActiveService(null)}
+                              className={`flex items-center space-x-2 px-4 py-2 rounded transition-all ${
+                                activeService === service.name
+                                  ? "bg-violet-600 text-white scale-105"
+                                  : "hover:bg-violet-700"
+                              }`}
+                            >
+                              <span>{service.icon}</span>
+                              <span>{service.name}</span>
+                            </Link>
+                          ))}
+                      </div>
+                    ))}
                   </div>
                 </motion.div>
               )}
@@ -123,51 +134,18 @@ const Header = () => {
                 <details>
                   <summary className="cursor-pointer hover:text-gray-300">Services</summary>
                   <ul className="space-y-2 pl-4">
-                    <li>
-                      <Link
-                        to="/aws-solutions"
-                        className="block hover:text-gray-300"
-                        onClick={closeMobileMenu}
-                      >
-                        AWS Solutions
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="/android-ios-cross-platform"
-                        className="block hover:text-gray-300"
-                        onClick={closeMobileMenu}
-                      >
-                        Mobile Application
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="/web-applications"
-                        className="block hover:text-gray-300"
-                        onClick={closeMobileMenu}
-                      >
-                        Web Application
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="/e-commerce-solutions"
-                        className="block hover:text-gray-300"
-                        onClick={closeMobileMenu}
-                      >
-                        E-commerce Solutions
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="/software-consulting"
-                        className="block hover:text-gray-300"
-                        onClick={closeMobileMenu}
-                      >
-                        Software Consulting Service
-                      </Link>
-                    </li>
+                    {services.map((service) => (
+                      <li key={service.name}>
+                        <Link
+                          to={service.path}
+                          className="flex items-center space-x-2 hover:text-gray-300"
+                          onClick={closeMobileMenu}
+                        >
+                          <span>{service.icon}</span>
+                          <span>{service.name}</span>
+                        </Link>
+                      </li>
+                    ))}
                   </ul>
                 </details>
               </li>
