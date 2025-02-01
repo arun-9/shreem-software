@@ -2,12 +2,13 @@ import { useEffect } from "react";
 //import Navbar from "../Navbar";
 //import Header from "../Header Nav Component/Header";
 import Stats from "./Stats";
+
 import WhyChooseUs from "../../WhyChooseUs/WhyChooseUs";
 import ContactUs from "../Homepage/ContactUs";
 import CaseStudies from "../../caseStudies/caseStudies";
 import AgileMethodologyProcess from "../../AgileMethodologyProcess/AgileMethodologyProcess";
 import TestimonialSlider from "../../TestimonialSlider/TestimonialSlider";
-import MenuSection from "../../menuItems/menuItems";
+
 //import MeetOurTeam from "../../MeetOurTeam";
 //import Testimonials from "../../Testimonials/Testimonials";
 import Contact from "../../ContactSection/ContactSection";
