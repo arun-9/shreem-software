@@ -7,6 +7,7 @@ import Portfolio from "./segments/Portfolio/Portfolio";
 import Testimonials from "./segments/Testimonials/Testimonials";
 import Contact from "./segments/Contact/Contact";
 import Blog from "./segments/Blog/Blog";
+import Footer from "./segments/Footer/Footer";
 import "swiper/css";
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
       <Testimonials />
       <Contact />
       <Blog />
+      <Footer />
     </>
   );
 };
