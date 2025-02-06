@@ -92,7 +92,6 @@ export const whyChooseUs = [
   },
 ];
 
-
 export const ourApproaches = [
   {
     title: "Client-Centered Collaboration",
@@ -242,22 +241,19 @@ export const socialHandles = [
 
 export const blogPost = [
   {
-    title:
-      "Transforming Healthcare with AI: How Datawave is Empowering Better Patient Outcomes",
+    title: "Transforming Healthcare with AI: How Datawave is Empowering Better Patient Outcomes",
     content:
       "This blog post explores Datawave’s impact on healthcare through AI-powered solutions, such as predictive analytics and machine learning tools that help medical professionals make data-driven decisions and optimize patient care.",
     image: blog1,
   },
   {
-    title:
-      "Protecting Businesses from Cyber Threats: Datawave’s Approach to Modern Cybersecurity",
+    title: "Protecting Businesses from Cyber Threats: Datawave’s Approach to Modern Cybersecurity",
     content:
       "Discuss Datawave’s cybersecurity solutions, highlighting advanced threat detection, machine learning in threat analysis, and proactive defense strategies that businesses can adopt to secure their data in an increasingly digital landscape.",
     image: blog2,
   },
   {
-    title:
-      "Building Smart Cities with IoT: Datawave’s Vision for Sustainable Urban Development",
+    title: "Building Smart Cities with IoT: Datawave’s Vision for Sustainable Urban Development",
     content:
       "This blog post dives into how Datawave is leveraging IoT to enable smart city infrastructure. Discuss IoT’s role in making cities more efficient, sustainable, and data-centric, with examples of how Datawave’s solutions have been implemented in urban development projects.",
     image: blog3,
@@ -267,7 +263,7 @@ export const blogPost = [
 export const clientsReviews = [
   {
     content:
-      "Datawave transformed our outdated systems into a seamless, secure infrastructure. Their team is exceptionally skilled and always available to assist.",
+      "Shreem Software transformed our business with their cutting-edge inventory management system. The team is highly skilled, professional, and delivers beyond expectations. Highly recommended!",
     name: "Sophia Roberts",
     jobTitle: "IT Manager, TechNova",
     rating: 4,
@@ -275,7 +271,7 @@ export const clientsReviews = [
   },
   {
     content:
-      "Partnering with Datawave has been a game-changer for our digital operations. Their innovative approach helped us scale effortlessly.",
+      "Working with Shreem Software was a game-changer for our startup. Their attention to detail and innovative approach helped us scale our operations efficiently. Excellent service!",
     name: "Rajesh Patel",
     jobTitle: "CEO, Alpha Logistics",
     rating: 4,
@@ -283,7 +279,7 @@ export const clientsReviews = [
   },
   {
     content:
-      "Datawave’s cloud solutions have boosted our productivity significantly. I can’t recommend their services enough!",
+      "We were struggling with outdated software until Shreem Software stepped in. Their team provided a seamless, user-friendly solution that has improved our workflow significantly. Great job!",
     name: "Emily Nguyen",
     jobTitle: "Operations Manager, Zenith Retail",
     rating: 3,
@@ -291,7 +287,7 @@ export const clientsReviews = [
   },
   {
     content:
-      "Our cybersecurity has never been stronger. Datawave identified vulnerabilities we didn’t know existed and resolved them efficiently.",
+      "The Shreem Software team is truly exceptional. Their expertise in web development and automation has helped us boost our online business. The customer support is outstanding!",
     name: "James O’Connor",
     jobTitle: "CTO, Shield Financial Group",
     rating: 5,
@@ -299,7 +295,7 @@ export const clientsReviews = [
   },
   {
     content:
-      "The team at Datawave delivered ahead of schedule and exceeded expectations. Their professionalism and expertise are unmatched.",
+      "Shreem Software’s solutions are reliable, scalable, and efficient. Their team understands business requirements and delivers custom solutions that fit perfectly. Would love to work with them again!",
     name: "Fatima Yusuf",
     jobTitle: "Project Lead, GreenTech Solutions",
     rating: 4,
@@ -307,7 +303,7 @@ export const clientsReviews = [
   },
   {
     content:
-      "Datawave provided scalable solutions that have supported our rapid growth. Their ongoing support ensures we’re always ahead.",
+      "We partnered with Shreem Software for our educational platform, and they delivered a flawless, high-performance application. Their expertise in MERN stack development is top-notch!",
     name: "Liam Carter",
     jobTitle: "Founder, BrightSpark Media",
     rating: 4,
