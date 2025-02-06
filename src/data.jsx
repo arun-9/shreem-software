@@ -241,21 +241,21 @@ export const socialHandles = [
 
 export const blogPost = [
   {
-    title: "Transforming Healthcare with AI: How Datawave is Empowering Better Patient Outcomes",
+    title: "Custom Software",
     content:
-      "This blog post explores Datawave’s impact on healthcare through AI-powered solutions, such as predictive analytics and machine learning tools that help medical professionals make data-driven decisions and optimize patient care.",
+      "Generic software lacks flexibility. Custom solutions ensure scalability, security, and efficiency for your business. Upgrade today with Shreem Software Pvt. Ltd.",
     image: blog1,
   },
   {
-    title: "Protecting Businesses from Cyber Threats: Datawave’s Approach to Modern Cybersecurity",
+    title: "Web Trends 2025",
     content:
-      "Discuss Datawave’s cybersecurity solutions, highlighting advanced threat detection, machine learning in threat analysis, and proactive defense strategies that businesses can adopt to secure their data in an increasingly digital landscape.",
+      "Web development is evolving with AI, PWAs, and serverless computing. Stay ahead with modern, high-performing solutions. Let’s build the future together!",
     image: blog2,
   },
   {
-    title: "Building Smart Cities with IoT: Datawave’s Vision for Sustainable Urban Development",
+    title: "Cybersecurity First",
     content:
-      "This blog post dives into how Datawave is leveraging IoT to enable smart city infrastructure. Discuss IoT’s role in making cities more efficient, sustainable, and data-centric, with examples of how Datawave’s solutions have been implemented in urban development projects.",
+      "Cyber threats like phishing, ransomware, and DDoS are rising. Protect your business with AI-driven security, firewalls, and encryption. Stay safe with Shreem Software Pvt. Ltd.",
     image: blog3,
   },
 ];
