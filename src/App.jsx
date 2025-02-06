@@ -1,39 +1,21 @@
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./App.css";
-import Header from "./components/Navbar";
-import Footer from "./components/Unused Components/Footer";
-import Homepage from "./components/pages/Homepage/Homepage";
-import CareersPage from "./components/pages/CareersPage/CareersPage";
-import ContactPage from "./components/pages/ContactPage/ContactPage";
-import MobileAppDevelopment from "./components/pages/Solution/MobileAppDevelopment";
-import WebAppDevelopment from "./components/pages/Solution/WebAppDevelopment";
-import EcommerceSolutions from "./components/pages/Solution/EcommerceSolutions";
-import AWSCloudServices from "./components/pages/Solution/AWSCloudServices";
-import SoftwareConsultingServices from "./components/pages/Solution/SoftwareConsultingServices";
-//import About from "./components/pages/About";
-
-//import Contact from "./components/pages/Contact";
-
-function App() {
+import Navbar from "./segments/Navbar/Navbar";
+import Hero from "./segments/Hero/Hero";
+import Achievement from "./segments/Achievement/Achievement";
+import About from "./segments/About/About";
+import Service from "./segments/Services/Service";
+import Portfolio from "./segments/Portfolio/Portfolio";
+import "swiper/css";
+const App = () => {
   return (
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/careers" element={<CareersPage />} />
-        <Route path="/contact-us" element={<ContactPage />} />
-        <Route path="/mobile-application" element={<MobileAppDevelopment />} />
-        <Route path="/web-applications" element={<WebAppDevelopment />} />
-        <Route path="/e-commerce-solutions" element={<EcommerceSolutions />} />
-        <Route path="/aws-solutions" element={<AWSCloudServices />} />
-        <Route path="/software-consulting" element={<SoftwareConsultingServices />} />
-        {/*<Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />*/}
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+    <>
+      <Navbar />
+      <Hero />
+      <Achievement />
+      <About />
+      <Service />
+      <Portfolio />
+    </>
   );
-}
+};
 
 export default App;
