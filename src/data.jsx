@@ -199,13 +199,13 @@ export const contactInfo = [
   {
     title: "Email Us",
     description: "Fast and Reliable Support",
-    value: "mradinuba@gmail.com",
+    value: "shreesoftware@gmail.com",
     icon: MdOutlineAlternateEmail,
   },
   {
     title: "Our Address",
     description: "Come visit us in our office",
-    value: "First Avenue, Gwarinpa, Abuja Nigeria",
+    value: "Bengaluru",
     icon: FaLocationCrosshairs,
   },
   {
@@ -235,7 +235,7 @@ export const socialHandles = [
   {
     name: "Youtube",
     icon: FaYoutube,
-    link: "https://www.youtube.com/channel/UCEtnsPZQEd0l1tbr_nDQd5Q?sub_confirmation=1",
+    link: "https://www.youtube.com/",
   },
 ];
 
