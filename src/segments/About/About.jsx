@@ -4,9 +4,46 @@ import PersonnelImage from "../../assets/pic-1.png";
 import { whyChooseUs, ourApproaches } from "../../data";
 import { convertHexToRgba, cssPerfectShape } from "../../util/index";
 import { Link } from "react-scroll";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+import { useRef } from "react";
+
 const About = () => {
+  const container = useRef(null);
+  useGSAP(
+    () => {
+      gsap
+        .timeline({
+          delay: 0.5,
+          scrollTrigger: {
+            trigger: container.current,
+            start: "20% bottom",
+            end: "bottom top",
+          },
+        })
+        .fromTo(
+          [
+            "#about .vision-item",
+            "#about .vision-item .image-container",
+            "#about h2",
+            "#about .approach",
+            "#about .contact-us ",
+          ],
+          { y: 50, opacity: 0 },
+          { y: 0, opacity: 1, stagger: 0.5 },
+        )
+        .fromTo(
+          ["#about .spotlight", "#about .why-choose-us-container .why-choose-us"],
+          { x: 50, opacity: 0 },
+          { x: 0, opacity: 1, stagger: 0.5 },
+        );
+    },
+    { scope: container },
+  );
   return (
-    <section id="about">
+    <section id="about" ref={container}>
       <div className="container">
         <div className="left-column">
           <div className="spotlight" />
@@ -16,9 +53,8 @@ const About = () => {
                 <h2>Our Vision</h2>
                 <h4 className="title">Transforming Technology into Progress</h4>
                 <p className="description">
-                  Our vision is to empower businesses with practical,
-                  cutting-edge IT solutions that drive growth, streamline
-                  processes, and enhance competitiveness.
+                  Our vision is to empower businesses with practical, cutting-edge IT solutions that
+                  drive growth, streamline processes, and enhance competitiveness.
                 </p>
               </div>
               <div className="image-container">
@@ -32,8 +68,8 @@ const About = () => {
                 <h2>Who We Are</h2>
                 <h4 className="title">Your Trusted Technology Partner</h4>
                 <p className="description">
-                  We are experienced IT professionals delivering tailored tech
-                  solutions to meet each clients unique goals.
+                  We are experienced IT professionals delivering tailored tech solutions to meet
+                  each clients unique goals.
                 </p>
               </div>
               <div className="image-container">
@@ -68,7 +104,7 @@ const About = () => {
                   className="icon"
                   style={{
                     ...cssPerfectShape(50, 50),
-                    background: convertHexToRgba("--primary", 0.1)
+                    background: convertHexToRgba("--primary", 0.1),
                   }}
                 >
                   <approach.icon />
