@@ -43,7 +43,7 @@ const Navbar = () => {
       <nav
         id="navbar"
         className={drop ? "blur drop" : ""}
-        style={{ background: convertHexToRgba("--bg-base", 0.8) }}
+        style={{ background: drop ? convertHexToRgba("--bg-base", 0.8) : "transparent" }}
       >
         <ShreeLogo />
         <div className="route-wrapper">
