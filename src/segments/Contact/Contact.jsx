@@ -5,6 +5,11 @@ import { cssPerfectShape } from "../../util/index";
 import Socials from "../../components/Socials/Socials";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+import { useRef } from "react";
 
 const generateCaptcha = () => {
   const num1 = Math.floor(Math.random() * 10);
@@ -54,8 +59,46 @@ const Contact = () => {
       toast.error("Failed to send message. Please try again later.");
     }
   };
+
+  const container = useRef(null);
+  useGSAP(
+    () => {
+      gsap
+        .timeline({
+          delay: 0.5,
+          scrollTrigger: {
+            trigger: container.current,
+            start: "20% bottom",
+            end: "bottom top",
+          },
+        })
+        .fromTo(
+          ["#contact .contact-info-wrapper .contact-info"],
+          { x: -50, opacity: 0 },
+          { x: 0, opacity: 1, stagger: 0.5 },
+        )
+        .fromTo(
+          ["#contact .socials .icon"],
+          { x: 50, opacity: 0 },
+          { x: 0, opacity: 1, stagger: 0.5 },
+        )
+        .fromTo(
+          [
+            "#contact form h2",
+            "#contact form .description",
+            "#contact form .container",
+            "#contact form .middle .control ",
+            "#contact form .middle .captcha-container ",
+            "#contact form .btn",
+          ],
+          { x: -50, opacity: 0 },
+          { x: 0, opacity: 1, stagger: 0.5 },
+        );
+    },
+    { scope: container },
+  );
   return (
-    <section id="contact">
+    <section id="contact" ref={container}>
       <div className="container">
         <div className="contact-info-wrapper">
           {contactInfo.map((info, index) => (
