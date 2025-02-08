@@ -3,9 +3,39 @@ import ShreeLogo from "../../components/ShreeLogo/ShreeLogo";
 import Socials from "../../components/Socials/Socials";
 import { footer, contactInfo } from "../../data";
 import { Link } from "react-scroll";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+import { useRef } from "react";
 const Footer = () => {
+  const container = useRef(null);
+  useGSAP(
+    () => {
+      gsap
+        .timeline({
+          delay: 0.5,
+          scrollTrigger: {
+            trigger: container.current,
+            start: "20% bottom",
+            end: "bottom top",
+          },
+        })
+        .fromTo(
+          [
+            "footer .newsletter h2",
+            "footer .newsletter p",
+            "footer .newsletter .subscribe",
+            "footer .box-wrapper .box",
+          ],
+          { y: 50, opacity: 0 },
+          { y: 0, opacity: 1, stagger: 0.5 },
+        );
+    },
+    { scope: container },
+  );
   return (
-    <footer>
+    <footer ref={container}>
       <div className="container">
         <section className="newsletter">
           <h2>NEWSLETTER</h2>
