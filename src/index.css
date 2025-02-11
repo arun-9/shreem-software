@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-  --primary: #00aaff;
+  /*--primary: #00aaff;
   --bg-base: #121212;
   --bg-secondary: #1c1c1c;
   --bg-accent: #2a2a2e;
@@ -12,7 +12,19 @@
   --color-success: #33c648;
   --color-danger: #fc605b;
   --color-warning: #ffbb55;
-  --transition: all 0.4s ease-out 0s;
+  --transition: all 0.4s ease-out 0s;*/
+  --primary: #ff3366; /* Bright Coral Pink */
+  --bg-base: #101820; /* Deep Midnight Blue */
+  --bg-secondary: #19232d; /* Dark Slate Blue */
+  --bg-accent: #273746; /* Muted Steel Blue */
+  --text-color: #e0e0e0; /* Light Gray for Readability */
+  --text-muted: #a0aec0; /* Muted Cool Gray */
+  --border-color: #3b4a5a; /* Soft Gray-Blue Border */
+  --color-white: #ffffff; /* Pure White */
+  --color-success: #22c55e; /* Vibrant Green */
+  --color-danger: #d72638; /* Deep Red */
+  --color-warning: #ff9800; /* Warm Orange */
+  --transition: all 0.35s ease-in-out;
 }
 
 * {

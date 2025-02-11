@@ -29,7 +29,7 @@ const Hero = () => {
           >
             Innovating Tomorrow, Today
           </h4>
-          <h1 className="hero-title">Shree Software – Software You Can Trust</h1>
+          <h1 className="hero-title">Shreem Software – Software You Can Trust</h1>
           <p className="hero-description">
             Shreem Software Pvt. Ltd. is committed to delivering smart, customized, and reliable
             software solutions. We collaborate with businesses to turn challenges into opportunities
@@ -40,7 +40,7 @@ const Hero = () => {
             <Link to="contact" smooth={true} className="btn primary">
               Get Started <FaArrowTrendUp />
             </Link>
-            <Link to="projects" smooth={true} className="btn">
+            <Link to="portfolio" smooth={true} className="btn">
               See Our Work <FaProjectDiagram />
             </Link>
           </div>

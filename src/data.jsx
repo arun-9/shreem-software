@@ -199,7 +199,7 @@ export const contactInfo = [
   {
     title: "Email Us",
     description: "Fast and Reliable Support",
-    value: "shreesoftware@gmail.com",
+    value: "shreemsoftware@gmail.com",
     icon: MdOutlineAlternateEmail,
   },
   {

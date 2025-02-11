@@ -4,7 +4,7 @@ const ShreeLogo = () => {
   return (
     <div className="logo">
       <Logo />
-      <h1>Shree</h1>
+      <h1>Shreem</h1>
     </div>
   );
 };

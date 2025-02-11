@@ -67,7 +67,7 @@ const Service = () => {
                 <p className="line-clamp-3 description">{service.description}</p>
               </div>
               <div className="bottom">
-                <Link to="/contact" className="btn primary">
+                <Link to="contact" className="btn primary">
                   Explore <FaArrowRightLong />
                 </Link>
               </div>
