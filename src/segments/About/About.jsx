@@ -51,10 +51,11 @@ const About = () => {
             <div className="vision-item">
               <div className="vision-content">
                 <h2>Our Vision</h2>
-                <h4 className="title">Transforming Technology into Progress</h4>
+                <h4 className="title">Empowering Innovation, Shaping the Future</h4>
                 <p className="description">
-                  Our vision is to empower businesses with practical, cutting-edge IT solutions that
-                  drive growth, streamline processes, and enhance competitiveness.
+                  Shreem Software Pvt. Ltd. envisions a future of innovation and efficiency through
+                  cutting-edge software solutions. We strive to empower businesses with scalable,
+                  secure, and smart technology.
                 </p>
               </div>
               <div className="image-container">
@@ -68,8 +69,8 @@ const About = () => {
                 <h2>Who We Are</h2>
                 <h4 className="title">Your Trusted Technology Partner</h4>
                 <p className="description">
-                  We are experienced IT professionals delivering tailored tech solutions to meet
-                  each clients unique goals.
+                  Shreem Software Pvt. Ltd. is a trusted technology partner, delivering innovative
+                  and customized software solutions to drive business success.
                 </p>
               </div>
               <div className="image-container">
