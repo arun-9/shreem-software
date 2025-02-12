@@ -72,23 +72,17 @@ export const whyChooseUs = [
   {
     title: "Proven Expertise",
     imageIcon: shieldImage,
-    description: `With years of experience across multiple industries, our team
-                brings deep knowledge and technical expertise to every project,
-                ensuring solutions that are both innovative and reliable.`,
+    description: `With extensive experience across diverse industries, Shreem Software Pvt. Ltd. combines deep technical knowledge and expertise to deliver innovative, reliable solutions for every project.`,
   },
   {
     title: "Customized Solutions",
     imageIcon: pencilImage,
-    description: `We understand that every business is unique. Our solutions are
-                tailored to fit each client's specific needs, providing maximum
-                flexibility and scalability for the future.`,
+    description: `At Shreem Software Pvt. Ltd., we recognize every business is unique. Our tailored solutions offer maximum flexibility and scalability to meet your specific needs and future growth.`,
   },
   {
     title: "Exceptional Support",
     imageIcon: headsetImage,
-    description: `Our commitment doesn’t end at project delivery. We provide
-                dedicated, ongoing support to ensure your business continues to
-                succeed with our solutions.`,
+    description: `At Shreem Software Pvt. Ltd., our commitment goes beyond project completion. We offer dedicated, continuous support to ensure your business thrives with our solutions.`,
   },
 ];
 
@@ -96,24 +90,17 @@ export const ourApproaches = [
   {
     title: "Client-Centered Collaboration",
     icon: FaHandshake,
-    description: `We prioritize close collaboration, working directly with
-                  clients to fully understand their vision and challenges. This
-                  partnership ensures each solution is perfectly aligned with
-                  their business goals.`,
+    description: `Shreem Software Pvt. Ltd. builds strong partnerships, understanding client needs to deliver tailored solutions that align with their business goals.`,
   },
   {
     title: "Innovation-Driven Solutions",
     icon: HiOutlineLightBulb,
-    description: `Innovation is at the heart of everything we do. We apply the
-                  latest technologies and creative problem-solving to develop
-                  solutions that drive long-term growth and competitiveness.`,
+    description: `Shreem Software Pvt. Ltd. leverages cutting-edge technologies and creativity to deliver solutions that drive growth and competitiveness.`,
   },
   {
     title: "Agile and Adaptive",
     icon: GrSync,
-    description: `Our agile approach keeps us flexible and ready to adapt to
-                  changing needs. This method allows us to deliver scalable
-                  solutions that grow alongside your business.`,
+    description: `At Shreem Software Pvt. Ltd., our agile approach ensures flexibility, allowing us to deliver scalable solutions that evolve with your business needs.`,
   },
 ];
 
@@ -158,39 +145,39 @@ export const services = [
 
 export const portfolio = [
   {
-    title: "Secure E-Commerce Platform",
+    title: "Inventory Management System",
     description:
-      "Developed a high-performance e-commerce platform with advanced security features, enabling safe and seamless transactions for customers worldwide.",
+      "Developed a custom web-based inventory management system using the MERN stack, allowing the business to efficiently track, manage, and audit assets with real-time updates.",
     image: portfolio1,
   },
   {
-    title: "Cloud Migration for a Global Company",
+    title: "Corporate Website",
     description:
-      "Successfully migrated a global company’s data to a secure, scalable cloud environment, improving access and reducing costs.",
+      "Designed and developed a responsive, SEO-optimized corporate website to showcase company’s services, vision, and portfolio, ensuring a user-friendly experience across devices.",
     image: portfolio2,
   },
   {
-    title: "Real-Time Data Analytics Dashboard",
+    title: "Cloud Infrastructure and Management on AWS",
     description:
-      "Created a real-time analytics dashboard that provides actionable insights, helping businesses make data-driven decisions quickly.",
+      "Designed and implemented a scalable AWS cloud infrastructure for Enterprises, including storage, EC2, and automated backups, ensuring high availability, security, and cost-efficient performance.",
     image: portfolio3,
   },
   {
-    title: "Custom CRM Solution for Client Management",
+    title: "E-commerce Website ",
     description:
-      "Designed a custom CRM system to improve client interactions, streamline workflows, and manage leads effectively.",
+      "Created a secure, scalable e-commerce platform with a user-friendly interface, seamless checkout, and integrated payment gateways, helping Retailer expand and manage online sales.",
     image: portfolio4,
   },
   {
-    title: "AI-Powered Cybersecurity Monitoring System",
+    title: "Mobile App for Travel Planning",
     description:
-      "Built an AI-driven security monitoring system that detects and responds to threats in real time, ensuring robust protection for client data.",
+      "Developed a mobile application for iOS and Android that helps users plan their travel. The app provides destination recommendations, itineraries, booking options, and real-time updates, making travel planning seamless and convenient for users.",
     image: portfolio5,
   },
   {
-    title: "High-Speed Network Infrastructure for Corporate Office",
+    title: "AI-powered Chatbot for Customer Support",
     description:
-      "Implemented a high-speed network infrastructure to boost productivity and connectivity in a large corporate office.",
+      "Built an AI-powered chatbot for company Services' website, providing 24/7 support, answering queries, and improving customer satisfaction.",
     image: portfolio6,
   },
 ];

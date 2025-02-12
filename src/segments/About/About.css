@@ -75,6 +75,10 @@
   z-index: 2;
 }
 
+#about .vision-item .image-container img {
+  height: 105%;
+}
+
 #about .why-choose-us-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
