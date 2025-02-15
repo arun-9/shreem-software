@@ -1,15 +1,15 @@
-import { WiDayCloudyGusts } from "react-icons/wi";
-import { BsShieldLock, BsBarChartLine } from "react-icons/bs";
+/*import { WiDayCloudyGusts } from "react-icons/wi";
+import { BsShieldLock, BsBarChartLine } from "react-icons/bs";*/
 import {
   FaFacebook,
   FaInstagram,
   FaLinkedin,
   FaYoutube,
-  FaCode,
+  /*FaCode,*/
   FaHandshake,
 } from "react-icons/fa6";
-import { FaRegLightbulb } from "react-icons/fa";
-import { IoGitNetworkSharp } from "react-icons/io5";
+/*import { FaRegLightbulb } from "react-icons/fa";
+import { IoGitNetworkSharp } from "react-icons/io5";*/
 import { HiOutlineLightBulb } from "react-icons/hi";
 import { GrSync } from "react-icons/gr";
 import {
@@ -23,7 +23,7 @@ import {
   portfolio3,
   portfolio4,
   portfolio5,
-  portfolio6,
+  //portfolio6,
 
   //Clients images import
   client1,
@@ -42,31 +42,13 @@ import { FaLocationCrosshairs } from "react-icons/fa6";
 import { FiPhoneCall } from "react-icons/fi";
 
 export const navRoutes = [
-  {
-    id: "hero",
-    name: "Home",
-  },
-  {
-    id: "about",
-    name: "About",
-  },
-  {
-    id: "services",
-    name: "Services",
-  },
-  {
-    id: "portfolio",
-    name: "Portfolio",
-  },
-  {
-    id: "blog",
-    name: "Blog",
-  },
-  {
-    id: "contact",
-    name: "Contact",
-  },
+  { id: "hero", label: "Home" },
+  { id: "about", label: "About" },
+  { id: "services", label: "Services" },
+  { id: "portfolio", label: "Portfolio" },
+  { id: "contact", label: "Contact" },
 ];
+
 
 export const whyChooseUs = [
   {
@@ -104,7 +86,7 @@ export const ourApproaches = [
   },
 ];
 
-export const services = [
+/*export const services = [
   {
     title: "Cloud Solutions",
     description:
@@ -141,7 +123,7 @@ export const services = [
       "Optimize your business connectivity with reliable, high-speed network infrastructure solutions designed to keep your operations seamless and resilient.",
     icon: IoGitNetworkSharp,
   },
-];
+];*/
 
 export const portfolio = [
   {
@@ -174,12 +156,11 @@ export const portfolio = [
       "Developed a mobile application for iOS and Android that helps users plan their travel. The app provides destination recommendations, itineraries, booking options, and real-time updates, making travel planning seamless and convenient for users.",
     image: portfolio5,
   },
-  {
+  /*
     title: "AI-powered Chatbot for Customer Support",
     description:
       "Built an AI-powered chatbot for company Services' website, providing 24/7 support, answering queries, and improving customer satisfaction.",
-    image: portfolio6,
-  },
+    image: portfolio6,*/
 ];
 
 export const contactInfo = [

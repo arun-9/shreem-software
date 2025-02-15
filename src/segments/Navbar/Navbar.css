@@ -16,6 +16,7 @@
 #navbar.drop {
   position: fixed;
   animation: drop 1s;
+  background: var(--bg-base) !important; /* Ensure it stays visible */
 }
 
 @keyframes drop {
@@ -26,6 +27,7 @@
     top: 0;
   }
 }
+
 #navbar .route-wrapper {
   display: flex;
   align-items: stretch;
@@ -95,8 +97,27 @@
 
 @media screen and (max-width: 800px) {
   #navbar .route-wrapper {
-    display: none;
+    display: flex !important;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--bg-base);
+    padding: 15px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    z-index: 100;
   }
+
+  #navbar .route-wrapper.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
   #navbar .menu {
     display: flex;
   }
