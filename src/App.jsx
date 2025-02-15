@@ -1,29 +1,29 @@
-import Navbar from "./segments/Navbar/Navbar";
-import Hero from "./segments/Hero/Hero";
-import Achievement from "./segments/Achievement/Achievement";
-import About from "./segments/About/About";
-import Service from "./segments/Services/Service";
-import Portfolio from "./segments/Portfolio/Portfolio";
-import Testimonials from "./segments/Testimonials/Testimonials";
-import Contact from "./segments/Contact/Contact";
-import Blog from "./segments/Blog/Blog";
-import Footer from "./segments/Footer/Footer";
-import "swiper/css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout/Layout";
+import HomePage from "./pages/HomePage";
 
+import CyberSecurityServices from "./pages/services/CyberSecurityServices"; // Import the new component
+import AWSCloudServices from "./pages/services/AWSCloudServices";
+import "swiper/css";
+import MobileAppDevelopment from "./pages/services/MobileAppDevelopment";
+import EcommerceSolutions from "./pages/services/EcommerceSolutions";
+import WebAppDevelopment from "./pages/services/WebAppDevelopment";
+import SoftwareConsultingServices from "./pages/services/SoftwareConsultingServices";
 const App = () => {
   return (
-    <>
-      <Navbar />
-      <Hero />
-      <Achievement />
-      <About />
-      <Service />
-      <Portfolio />
-      <Testimonials />
-      <Blog />
-      <Contact />
-      <Footer />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route path="/services/CyberSecurityServices" element={<CyberSecurityServices />} />
+          <Route path="/services/AWSCloudServices" element={<AWSCloudServices />} />
+          <Route path="/services/MobileAppDevelopment" element={<MobileAppDevelopment />} />
+          <Route path="/services/EcommerceSolutions" element={<EcommerceSolutions />} />
+          <Route path="/services/WebDevelopment" element={<WebAppDevelopment />} />
+          <Route path="/services/SoftwareConsulting" element={<SoftwareConsultingServices />} />
+        </Route>
+      </Routes>
+    </Router>
   );
 };
 
