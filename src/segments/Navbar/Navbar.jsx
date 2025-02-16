@@ -1,96 +1,113 @@
-import "./Navbar.css";
-import ShreeLogo from "../../components/ShreeLogo/ShreeLogo";
-import { navRoutes } from "../../data";
+import { useEffect, useState, useCallback } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
-import Socials from "../../components/Socials/Socials";
-import { CgMenuRight, CgClose } from "react-icons/cg";
-import { useState, useEffect, useCallback } from "react";
-import { convertHexToRgba } from "../../util";
 import gsap from "gsap";
+import ShreeLogo from "../../components/ShreeLogo/ShreeLogo";
+import Socials from "../../components/Socials/Socials";
+import { navRoutes } from "../../data";
+import { convertHexToRgba } from "../../util";
+import "./Navbar.css";
 
 const Navbar = () => {
-  const [open, setOpen] = useState(false);
-  const [drop, setDrop] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 
-  // Handles Navbar Blur Effect on Scroll
+  // Handle Scroll Effect
   useEffect(() => {
-    const dropNavbar = () => setDrop(window.scrollY > 200);
+    const dropNavbar = () => {
+      document.getElementById("navbar").classList.toggle("drop", window.scrollY > 100);
+    };
     window.addEventListener("scroll", dropNavbar);
     return () => window.removeEventListener("scroll", dropNavbar);
   }, []);
 
-  // GSAP Animation for Navbar (runs once on initial load)
+  // GSAP Animation (Ensure elements exist before animating)
   useEffect(() => {
-    gsap
-      .timeline({ delay: 0.5 })
-      .fromTo("#navbar .logo", { x: -50, opacity: 0 }, { x: 0, opacity: 1 })
-      .fromTo("#navbar .socials", { x: 50, opacity: 0 }, { x: 0, opacity: 1 })
-      .fromTo(
-        "#navbar .route-wrapper .route",
-        { x: -50, opacity: 0 },
-        { x: 0, opacity: 1, stagger: 0.2 },
-      );
+    gsap.fromTo(
+      "#navbar",
+      { opacity: 0, y: -20 },
+      { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" },
+    );
   }, []);
 
-  // Scroll to section after route change
-  useEffect(() => {
-    const hash = window.location.hash.replace("#", "");
-    if (hash) {
-      setTimeout(() => {
-        const element = document.getElementById(hash);
-        if (element) {
-          scroll.scrollTo(element.offsetTop - 50, { smooth: true, duration: 500 });
-        }
-      }, 100);
-    }
-  }, [location.pathname]);
-
-  // Optimized Navigation Click Handler
+  // Handle Navigation Click
   const handleNavClick = useCallback(
     (id) => {
-      setOpen(false); // Close menu after clicking link
       if (location.pathname === "/") {
         scroll.scrollTo(document.getElementById(id).offsetTop - 50, { smooth: true });
       } else {
         navigate(`/#${id}`);
+        setTimeout(() => {
+          scroll.scrollTo(document.getElementById(id)?.offsetTop - 50, { smooth: true });
+        }, 500);
       }
+      closeSidebar(); // Close sidebar on click
     },
     [location, navigate],
   );
+
+  // Toggle Sidebar State
+  const handleSidebarToggle = () => {
+    setIsSidebarOpen((prev) => !prev);
+  };
+
+  // Close sidebar
+  const closeSidebar = () => {
+    setIsSidebarOpen(false);
+  };
 
   return (
     <>
       <nav
         id="navbar"
-        className={`${drop ? "blur drop" : ""}`}
-        style={{
-          background: drop ? convertHexToRgba("--bg-base", 0.8) : "transparent",
-        }}
+        style={{ background: convertHexToRgba("--bg-base", 0.8) }}
+        aria-label="Main Navigation"
       >
         <ShreeLogo />
-
-        {/* Mobile & Desktop Navigation */}
-        <div className={`route-wrapper ${open ? "open" : ""}`}>
+        <div className="route-wrapper">
           {navRoutes.map((route, index) => (
-            <span key={index} className="route" onClick={() => handleNavClick(route.id)}>
+            <span
+              key={index}
+              className="route"
+              onClick={() => handleNavClick(route.id)}
+              aria-label={`Navigate to ${route.label}`}
+            >
               {route.label}
             </span>
           ))}
         </div>
-
         <Socials />
-
-        {/* Hamburger Button */}
-        <div className="menu" onClick={() => setOpen((prev) => !prev)}>
-          {open ? <CgClose /> : <CgMenuRight />}
-        </div>
+        <button
+          className={`menu-toggle ${isSidebarOpen ? "open" : "closed"}`}
+          onClick={handleSidebarToggle}
+          aria-label="Open mobile navigation menu"
+        />
       </nav>
 
-      {/* Overlay to close menu when clicking outside */}
-      {open && <div className="sidebar-overlay" onClick={() => setOpen(false)} />}
+      {/* Overlay */}
+      <div className={`overlay ${isSidebarOpen ? "active" : ""}`} onClick={closeSidebar}></div>
+
+      {/* Sidebar */}
+      <aside
+        className={`sidebar ${isSidebarOpen ? "active" : ""}`}
+        role="navigation"
+        aria-label="Mobile Navigation"
+      >
+        <button className="close-btn" onClick={closeSidebar} aria-label="Close sidebar menu">
+          ×
+        </button>
+        {navRoutes.map((route, index) => (
+          <span
+            key={index}
+            className="route"
+            onClick={() => handleNavClick(route.id)}
+            aria-label={`Navigate to ${route.label}`}
+          >
+            {route.label}
+          </span>
+        ))}
+      </aside>
     </>
   );
 };
