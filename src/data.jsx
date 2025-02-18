@@ -49,7 +49,6 @@ export const navRoutes = [
   { id: "contact", label: "Contact" },
 ];
 
-
 export const whyChooseUs = [
   {
     title: "Proven Expertise",
@@ -298,6 +297,14 @@ export const footer = [
       {
         title: "Portfolio",
         id: "portfolio",
+      },
+      {
+        title: "Careers",
+        id: "careers",
+      },
+      {
+        title: "Team",
+        id: "teams",
       },
     ],
   },

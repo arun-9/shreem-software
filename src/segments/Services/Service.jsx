@@ -105,7 +105,7 @@ const Service = () => {
 
             return (
               <div
-                className="blur service"
+                className=" service"
                 style={{
                   background: convertHexToRgba(bgSecondary, 0.8),
                 }}

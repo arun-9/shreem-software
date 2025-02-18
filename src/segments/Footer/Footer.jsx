@@ -2,14 +2,18 @@ import "./Footer.css";
 import ShreeLogo from "../../components/ShreeLogo/ShreeLogo";
 import Socials from "../../components/Socials/Socials";
 import { footer, contactInfo } from "../../data";
-import { Link } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll"; // Keep using react-scroll for other links
+import { Link } from "react-router-dom"; // Import react-router-dom's Link for page navigation
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
 import { useRef } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const Footer = () => {
   const container = useRef(null);
+
   useGSAP(
     () => {
       gsap
@@ -34,6 +38,7 @@ const Footer = () => {
     },
     { scope: container },
   );
+
   return (
     <footer ref={container}>
       <div className="container">
@@ -56,11 +61,22 @@ const Footer = () => {
             <div className="box" key={index}>
               <h3 className="title">{list.title}</h3>
               <div className="routes">
-                {list.subRoutes.map((route, index) => (
-                  <Link to={route.id} className="route" key={index}>
-                    {route.title}
-                  </Link>
-                ))}
+                {list.subRoutes.map((route, index) => {
+                  // For "Careers" and "Teams", use react-router-dom Link
+                  if (route.id === "careers" || route.id === "teams") {
+                    return (
+                      <Link to={`/${route.id}`} className="route" key={index}>
+                        {route.title}
+                      </Link>
+                    );
+                  }
+                  // For other routes, use react-scroll Link
+                  return (
+                    <ScrollLink to={route.id} className="route" key={index}>
+                      {route.title}
+                    </ScrollLink>
+                  );
+                })}
               </div>
             </div>
           ))}
@@ -72,7 +88,7 @@ const Footer = () => {
                 <div className="icon">
                   <info.icon />
                 </div>
-                <p>{info.value} </p>
+                <p>{info.value}</p>
               </div>
             ))}
           </div>

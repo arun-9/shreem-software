@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
 import HomePage from "./pages/HomePage";
-
+import Careers from "./segments/Careers/Careers"; // Import Careers component
 import CyberSecurityServices from "./pages/services/CyberSecurityServices"; // Import the new component
 import AWSCloudServices from "./pages/services/AWSCloudServices";
 import "swiper/css";
@@ -9,6 +9,7 @@ import MobileAppDevelopment from "./pages/services/MobileAppDevelopment";
 import EcommerceSolutions from "./pages/services/EcommerceSolutions";
 import WebAppDevelopment from "./pages/services/WebAppDevelopment";
 import SoftwareConsultingServices from "./pages/services/SoftwareConsultingServices";
+
 const App = () => {
   return (
     <Router>
@@ -21,6 +22,7 @@ const App = () => {
           <Route path="/services/EcommerceSolutions" element={<EcommerceSolutions />} />
           <Route path="/services/WebDevelopment" element={<WebAppDevelopment />} />
           <Route path="/services/SoftwareConsulting" element={<SoftwareConsultingServices />} />
+          <Route path="/careers" element={<Careers />} /> {/* Add Careers route */}
         </Route>
       </Routes>
     </Router>
