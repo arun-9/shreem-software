@@ -1,0 +1,121 @@
+.careers {
+  margin-top: 30px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.careers h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.careers p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.job-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 2rem;
+}
+
+.job-card {
+  background-color: #f4f4f4;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.job-card h2 {
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.job-card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.job-card h3 {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: #333;
+}
+
+.job-card ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  text-align: left;
+  font-size: 1rem;
+  color: #666;
+}
+
+.apply-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.apply-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .careers h1 {
+    font-size: 2rem;
+  }
+
+  .careers p {
+    font-size: 1rem;
+  }
+
+  .job-list {
+    grid-template-columns: 1fr; /* Single column layout on mobile */
+    gap: 1.5rem;
+  }
+
+  .job-card {
+    padding: 1rem;
+  }
+
+  .job-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .job-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .apply-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .careers h1 {
+    font-size: 1.8rem;
+  }
+
+  .careers p {
+    font-size: 0.9rem;
+  }
+
+  .job-card h2 {
+    font-size: 1.4rem;
+  }
+
+  .apply-button {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.85rem;
+  }
+}

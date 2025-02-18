@@ -82,7 +82,7 @@ const About = () => {
           <div className="why-choose-us-container">
             {whyChooseUs.map((list, index) => (
               <div
-                className="blur why-choose-us"
+                className=" why-choose-us"
                 style={{ background: convertHexToRgba("--bg-secondary", 0.3) }}
                 key={index}
               >

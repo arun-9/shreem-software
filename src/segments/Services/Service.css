@@ -8,7 +8,7 @@
 
 #services .spotlight {
   width: 100%;
-  bottom: 0;
+  bottom: 25%;
 }
 
 #services .container {
@@ -72,6 +72,11 @@
 @media screen and (max-width: 900px) {
   #services .services {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  #services .spotlight {
+    width: 100%;
+    bottom: 0%;
   }
 }
 

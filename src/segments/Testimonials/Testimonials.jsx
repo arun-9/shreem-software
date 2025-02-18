@@ -59,7 +59,7 @@ const Testimonials = () => {
         >
           {clientsReviews.map((client, index) => (
             <SwiperSlide
-              className="blur testimonial"
+              className=" testimonial"
               style={{ background: convertHexToRgba("--bg-secondary", 0.5) }}
               key={index}
             >

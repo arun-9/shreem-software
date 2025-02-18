@@ -65,7 +65,7 @@ const Navbar = () => {
     <>
       <nav
         id="navbar"
-        className={`${drop ? "blur drop" : ""}`}
+        className={`${drop ? "drop" : ""}`}
         style={{
           background: drop ? convertHexToRgba("--bg-base", 0.8) : "transparent",
         }}
