@@ -61,6 +61,16 @@ const Navbar = () => {
     [location, navigate],
   );
 
+  useEffect(() => {
+    if (open) {
+      setTimeout(() => {
+        document.querySelector(".sidebar").style.display = "flex";
+      }, 10);
+    } else {
+      document.querySelector(".sidebar").style.display = "none";
+    }
+  }, [open]);
+
   return (
     <>
       <nav
@@ -72,8 +82,8 @@ const Navbar = () => {
       >
         <ShreeLogo />
 
-        {/* Mobile & Desktop Navigation */}
-        <div className={`route-wrapper ${open ? "open" : ""}`}>
+        {/* Desktop Navigation */}
+        <div className="route-wrapper">
           {navRoutes.map((route, index) => (
             <span key={index} className="route" onClick={() => handleNavClick(route.id)}>
               {route.label}
@@ -83,13 +93,24 @@ const Navbar = () => {
 
         <Socials />
 
+        {/* Sidebar for Mobile Navigation */}
+        <div className={`sidebar ${open ? "open" : ""}`}>
+          <div className="sidebar-content">
+            {navRoutes.map((route, index) => (
+              <span key={index} className="route" onClick={() => handleNavClick(route.id)}>
+                {route.label}
+              </span>
+            ))}
+          </div>
+        </div>
+
         {/* Hamburger Button */}
         <div className="menu" onClick={() => setOpen((prev) => !prev)}>
           {open ? <CgClose /> : <CgMenuRight />}
         </div>
       </nav>
 
-      {/* Overlay to close menu when clicking outside */}
+      {/* Overlay to close sidebar when clicking outside */}
       {open && <div className="sidebar-overlay" onClick={() => setOpen(false)} />}
     </>
   );
