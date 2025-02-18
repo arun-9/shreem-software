@@ -13,18 +13,33 @@
   --color-danger: #fc605b;
   --color-warning: #ffbb55;
   --transition: all 0.4s ease-out 0s;*/
-  --primary: #ff3366; /* Bright Coral Pink */
-  --bg-base: #101820; /* Deep Midnight Blue */
-  --bg-secondary: #19232d; /* Dark Slate Blue */
-  --bg-accent: #273746; /* Muted Steel Blue */
-  --text-color: #e0e0e0; /* Light Gray for Readability */
-  --text-muted: #a0aec0; /* Muted Cool Gray */
-  --border-color: #3b4a5a; /* Soft Gray-Blue Border */
+
+  /* 
+  --primary: #ff3366; 
+  --bg-base: #101820; 
+  --bg-secondary: #19232d; 
+  --bg-accent: #273746; 
+  --text-color: #e0e0e0; 
+  --text-muted: #a0aec0; 
+  --border-color: #3b4a5a; 
+  --color-white: #ffffff; 
+  --color-success: #22c55e;
+  --color-danger: #d72638; 
+  --color-warning: #ff9800; 
+  --transition: all 0.35s ease-in-out;*/
+
+  --primary: #007bff; /* Vivid Blue */
+  --bg-base: #0a192f; /* Deep Navy Blue */
+  --bg-secondary: #112240; /* Dark Blue */
+  --bg-accent: #1c3d5a; /* Muted Teal Blue */
+  --text-color: #ccd6f6; /* Soft White-Blue */
+  --text-muted: #8892b0; /* Cool Muted Blue */
+  --border-color: #2e4a67; /* Subtle Blue-Gray */
   --color-white: #ffffff; /* Pure White */
-  --color-success: #22c55e; /* Vibrant Green */
-  --color-danger: #d72638; /* Deep Red */
-  --color-warning: #ff9800; /* Warm Orange */
-  --transition: all 0.35s ease-in-out;
+  --color-success: #28a745; /* Strong Green */
+  --color-danger: #dc3545; /* Deep Red */
+  --color-warning: #ffb400; /* Vibrant Yellow */
+  --transition: all 0.3s ease-in-out;
 }
 
 * {

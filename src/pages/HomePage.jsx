@@ -5,6 +5,7 @@ import Service from "../segments/Services/Service";
 import Portfolio from "../segments/Portfolio/Portfolio";
 import Testimonials from "../segments/Testimonials/Testimonials";
 //import Blog from "../segments/Blog/Blog";
+import ShreemMap from "../segments/ShreemMap/ShreemMap";
 import Contact from "../segments/Contact/Contact";
 
 const HomePage = () => {
@@ -16,6 +17,7 @@ const HomePage = () => {
       <Service />
       <Portfolio />
       <Testimonials />
+      <ShreemMap />
       {/*<Blog />*/}
       <Contact />
     </>
