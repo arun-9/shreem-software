@@ -16,7 +16,7 @@
 #navbar.drop {
   position: fixed;
   animation: drop 1s;
-  background: var(--bg-base) !important; /* Ensure it stays visible */
+  background: var(--bg-base) !important;
 }
 
 @keyframes drop {
@@ -45,10 +45,7 @@
   justify-content: center;
 }
 
-#navbar .route:hover {
-  color: var(--primary);
-}
-
+#navbar .route:hover,
 #navbar .route.active {
   color: var(--primary);
 }
@@ -78,6 +75,41 @@
   color: var(--primary);
 }
 
+/* Sidebar Styling */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100vh;
+  background: var(--bg-base);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+  z-index: 100;
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sidebar .route {
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.sidebar .route:hover {
+  background: var(--primary);
+  color: white;
+}
+
 @media screen and (max-width: 940px) {
   #navbar .socials {
     display: none;
@@ -86,26 +118,7 @@
 
 @media screen and (max-width: 800px) {
   #navbar .route-wrapper {
-    display: flex; /* Ensure it is not `display: none` */
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: var(--bg-base);
-    padding: 15px;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
-    z-index: 100;
-  }
-
-  #navbar .route-wrapper.open {
-    display: flex; /* Ensure it's not hidden */
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+    display: none;
   }
 
   #navbar .menu {

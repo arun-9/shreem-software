@@ -8,6 +8,7 @@ import { CgMenuRight, CgClose } from "react-icons/cg";
 import { useState, useEffect, useCallback } from "react";
 import { convertHexToRgba } from "../../util";
 import gsap from "gsap";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -52,24 +53,17 @@ const Navbar = () => {
   const handleNavClick = useCallback(
     (id) => {
       setOpen(false); // Close menu after clicking link
-      if (location.pathname === "/") {
-        scroll.scrollTo(document.getElementById(id).offsetTop - 50, { smooth: true });
-      } else {
-        navigate(`/#${id}`);
-      }
+      setTimeout(() => {
+        // Ensure menu is closed before navigating
+        if (location.pathname === "/") {
+          scroll.scrollTo(document.getElementById(id).offsetTop - 50, { smooth: true });
+        } else {
+          navigate(`/#${id}`);
+        }
+      }, 100);
     },
     [location, navigate],
   );
-
-  useEffect(() => {
-    if (open) {
-      setTimeout(() => {
-        document.querySelector(".sidebar").style.display = "flex";
-      }, 10);
-    } else {
-      document.querySelector(".sidebar").style.display = "none";
-    }
-  }, [open]);
 
   return (
     <>
@@ -94,7 +88,12 @@ const Navbar = () => {
         <Socials />
 
         {/* Sidebar for Mobile Navigation */}
-        <div className={`sidebar ${open ? "open" : ""}`}>
+        <motion.div
+          className={`sidebar ${open ? "open" : ""}`}
+          initial={{ x: "100%" }}
+          animate={{ x: open ? "0%" : "100%" }}
+          transition={{ type: "spring", stiffness: 300, damping: 30 }}
+        >
           <div className="sidebar-content">
             {navRoutes.map((route, index) => (
               <span key={index} className="route" onClick={() => handleNavClick(route.id)}>
@@ -102,7 +101,7 @@ const Navbar = () => {
               </span>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* Hamburger Button */}
         <div className="menu" onClick={() => setOpen((prev) => !prev)}>
