@@ -1,13 +1,14 @@
 /*import { WiDayCloudyGusts } from "react-icons/wi";
 import { BsShieldLock, BsBarChartLine } from "react-icons/bs";*/
 import {
-  FaFacebook,
+  /*FaFacebook,
   FaInstagram,
   FaLinkedin,
   FaYoutube,
-  /*FaCode,*/
+  FaCode,*/
   FaHandshake,
 } from "react-icons/fa6";
+import { faFacebook, faInstagram, faLinkedin, faYoutube } from "@fortawesome/free-brands-svg-icons";
 /*import { FaRegLightbulb } from "react-icons/fa";
 import { IoGitNetworkSharp } from "react-icons/io5";*/
 import { HiOutlineLightBulb } from "react-icons/hi";
@@ -186,22 +187,22 @@ export const contactInfo = [
 export const socialHandles = [
   {
     name: "Facebook",
-    icon: FaFacebook,
+    icon: faFacebook,
     link: "https://www.facebook.com",
   },
   {
     name: "Instagram",
-    icon: FaInstagram,
+    icon: faInstagram,
     link: "https://www.instagram.com",
   },
   {
     name: "LinkedIn",
-    icon: FaLinkedin,
+    icon: faLinkedin,
     link: "https://www.linkedin.com",
   },
   {
     name: "Youtube",
-    icon: FaYoutube,
+    icon: faYoutube,
     link: "https://www.youtube.com/",
   },
 ];

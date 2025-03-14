@@ -45,7 +45,6 @@
   justify-content: center;
 }
 
-#navbar .route:hover,
 #navbar .route.active {
   color: var(--primary);
 }
@@ -88,7 +87,7 @@
   padding: 20px;
   box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out;
-  z-index: 100;
+  z-index: -1;
 }
 
 .sidebar-content {
