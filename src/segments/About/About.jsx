@@ -16,7 +16,7 @@ const About = () => {
     () => {
       gsap
         .timeline({
-          delay: 0.5,
+          delay: 0.1,
           scrollTrigger: {
             trigger: container.current,
             start: "20% bottom",
@@ -32,12 +32,12 @@ const About = () => {
             "#about .contact-us ",
           ],
           { y: 50, opacity: 0 },
-          { y: 0, opacity: 1, stagger: 0.5 },
+          { y: 0, opacity: 1, stagger: 0.1 },
         )
         .fromTo(
           ["#about .spotlight", "#about .why-choose-us-container .why-choose-us"],
           { x: 50, opacity: 0 },
-          { x: 0, opacity: 1, stagger: 0.5 },
+          { x: 0, opacity: 1, stagger: 0.1 },
         );
     },
     { scope: container },

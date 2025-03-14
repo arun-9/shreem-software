@@ -13,7 +13,7 @@ import { BsShieldLock } from "react-icons/bs";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -64,23 +64,31 @@ const services = [
 
 const Service = () => {
   const container = useRef(null);
+  const serviceRefs = useRef([]);
+  const [colors, setColors] = useState({ primary: "", bgSecondary: "" });
+
+  useEffect(() => {
+    setColors({
+      primary: getComputedStyle(document.documentElement).getPropertyValue("--primary"),
+      bgSecondary: getComputedStyle(document.documentElement).getPropertyValue("--bg-secondary"),
+    });
+  }, []);
 
   useGSAP(
     () => {
-      gsap
-        .timeline({
-          delay: 0.5,
+      gsap.fromTo(
+        serviceRefs.current,
+        { y: 50, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          stagger: 0.3,
           scrollTrigger: {
             trigger: container.current,
             start: "20% bottom",
-            end: "bottom top",
           },
-        })
-        .fromTo(
-          "#services .section-header h3, #services .section-header h2, #services .services .service, #services .spotlight",
-          { y: 50, opacity: 0 },
-          { y: 0, opacity: 1, stagger: 0.3 },
-        );
+        },
+      );
     },
     { scope: container },
   );
@@ -96,29 +104,22 @@ const Service = () => {
 
         <div className="services">
           {services.map((service, index) => {
-            const bgSecondary = getComputedStyle(document.documentElement).getPropertyValue(
-              "--bg-secondary",
-            );
-            const primaryColor = getComputedStyle(document.documentElement).getPropertyValue(
-              "--primary",
-            );
-
+            const IconComponent = service.icon;
             return (
               <div
-                className=" service"
-                style={{
-                  background: convertHexToRgba(bgSecondary, 0.8),
-                }}
+                ref={(el) => (serviceRefs.current[index] = el)}
+                className="service"
+                style={{ background: convertHexToRgba(colors.bgSecondary, 0.8) }}
                 key={index}
               >
                 <div
                   className="icon"
                   style={{
                     ...cssPerfectShape(70, 70),
-                    background: convertHexToRgba(primaryColor, 0.1),
+                    background: convertHexToRgba(colors.primary, 0.1),
                   }}
                 >
-                  <service.icon size={30} color="var(--primary)" />
+                  <IconComponent size={30} color="var(--primary)" />
                 </div>
                 <div className="middle">
                   <h4 className="title">{service.title}</h4>

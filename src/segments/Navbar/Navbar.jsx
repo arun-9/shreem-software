@@ -38,16 +38,23 @@ const Navbar = () => {
 
   // Scroll to section after route change
   useEffect(() => {
+    // Get the hash from the URL (after # symbol)
     const hash = window.location.hash.replace("#", "");
+
+    // If the hash exists, scroll to the corresponding element
     if (hash) {
-      setTimeout(() => {
+      const scrollToSection = () => {
         const element = document.getElementById(hash);
         if (element) {
+          // Smooth scroll to the section with an offset of 50px
           scroll.scrollTo(element.offsetTop - 50, { smooth: true, duration: 500 });
         }
-      }, 100);
+      };
+
+      // Ensure that the page is fully rendered and the element is accessible
+      setTimeout(scrollToSection, 100);
     }
-  }, [location.pathname]);
+  }, [location.pathname]); // Run the effect when location.pathname changes
 
   // Optimized Navigation Click Handler
   const handleNavClick = useCallback(
